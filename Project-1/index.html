@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="First mini project" />
+    <title>Analog Clock</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-size: 10px;
+      background-color: black;
+    }
+    .container {
+      width: 15rem;
+      height: 15rem;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      position: relative;
+    }
+    .time {
+      position: absolute;
+      width: 0.19rem;
+      height: 1.2rem;
+      background-color: #fff;
+      transform: rotate(45deg);
+    }
+    .quar {
+      transform: translate(10px, 10px);
+    }
+    .one {
+      top: 25px;
+      right: 58px;
+    }
+    .two {
+      top: 66px;
+      right: 23px;
+    }
+    .three {
+      top: 114px;
+      right: 16px;
+      transform: rotate(90deg);
+    }
+    .four {
+      bottom: 57px;
+      right: 25px;
+      transform: rotate(105deg);
+    }
+    .five {
+      bottom: 20px;
+      right: 57px;
+      transform: rotate(110deg);
+    }
+    .six {
+      bottom: 17px;
+      right: 127px;
+    }
+    .twelve {
+      top: -6px;
+      right: 128px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="time one"></div>
+      <div class="time two"></div>
+      <div class="time three quar"></div>
+      <div class="time four"></div>
+      <div class="time five"></div>
+      <div class="time six quar"></div>
+      <div class="time seven"></div>
+      <div class="time eight"></div>
+      <div class="time nine quar"></div>
+      <div class="time ten"></div>
+      <div class="time eleven"></div>
+      <div class="time twelve quar"></div>
+    </div>
+  </body>
+</html>
