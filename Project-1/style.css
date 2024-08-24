@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 10px;
+  background-color: rgba(22, 22, 22, 0.87);
+}
+.container {
+  width: 15rem;
+  height: 15rem;
+  border: outset 1.5mm rgba(22, 22, 22, 0.137);
+  box-shadow: inset -1px -1px 20px 6px rgba(22, 22, 22, 0.87);
+
+  border-radius: 50%;
+  position: relative;
+}
+.time {
+  position: absolute;
+  width: 0.19rem;
+  height: 1.2rem;
+  background-color: #ffffff63;
+  transform: rotate(45deg);
+}
+.quar {
+  transform: translate(10px, 10px);
+  background: rgba(255, 0, 255, 0.507);
+}
+.one {
+  top: 25px;
+  right: 58px;
+}
+.two {
+  top: 66px;
+  right: 23px;
+}
+.three {
+  top: 114px;
+  right: 16px;
+  transform: rotate(90deg);
+}
+.four {
+  bottom: 57px;
+  right: 25px;
+  transform: rotate(105deg);
+}
+.five {
+  bottom: 20px;
+  right: 57px;
+  transform: rotate(110deg);
+}
+.six {
+  bottom: 17px;
+  right: 127px;
+}
+.seven {
+  bottom: 24px;
+  left: 57px;
+  transform: rotate(50deg);
+}
+.eight {
+  bottom: 55px;
+  left: 28px;
+}
+.nine {
+  top: 114px;
+  left: 16px;
+  transform: rotate(90deg);
+}
+.ten {
+  top: 70px;
+  left: 23px;
+  transform: rotate(120deg);
+}
+.eleven {
+  top: 27px;
+  left: 48px;
+  transform: rotate(120deg);
+}
+.twelve {
+  top: -6px;
+  right: 128px;
+}
+.sub-container {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  position: relative;
+  margin: 2.3rem auto;
+}
+
+.sec::after {
+  content: "";
+  display: inline-block;
+  width: 0.12rem;
+  position: absolute;
+  top: -18px;
+  left: 50px;
+  height: 4.5rem;
+  background-image: linear-gradient(90deg, #79bbd1 0%, #a7b8f5 100%);
+  border-radius: 30%;
+}
+
+.minute::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: -3px;
+  left: 53px;
+  width: 0.2rem;
+  height: 3.5rem;
+  background-image: linear-gradient(90deg, #f89ead 0%, #ff7eb480 100%);
+  border-radius: 30%;
+}
+.hour::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: -2px;
+  left: 50px;
+  width: 0.2rem;
+  height: 3rem;
+  background-image: linear-gradient(90deg, #79bbd1 0%, #a7b8f5 100%);
+  border-radius: 30%;
+}
+.minute {
+  transform: rotate(180deg);
+}
+.hour {
+  transform: rotate(90deg);
+}
+.needle {
+  position: absolute;
+  top: 28px;
+  left: 2.2rem;
+  width: 6.5rem;
+  height: 6.5rem;
+}
+.dot {
+  position: absolute;
+  top: 73px;
+  left: 80px;
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: rgb(127 72 95 / 95%);
+  border-radius: 50%;
+  z-index: 200;
+}
