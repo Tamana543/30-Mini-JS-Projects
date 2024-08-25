@@ -4,7 +4,9 @@
 
 [Live](https://analog-clock-tamana.netlify.app/)
 
+<img src ="IMG/Analog Clock.png" width="300"/>
+
 ###### Project-2 (Slider)
 
 [Live](https://analog-clock-tamana.netlify.app/)
-<img src ="IMG/Analog Clock.png" width="300"/> | <img src ="IMG/Slider.png" width="300"/>
+<img src ="IMG/Slider.png" width="300"/>
