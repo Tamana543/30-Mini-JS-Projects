@@ -16,7 +16,7 @@ function createDot() {
 }
 function activeDots(slide) {
   document
-    .querySelector(".dots__dot")
+    .querySelectorAll(".dots__dot")
     .forEach((dot) => dot.classList.remove("dots__dot--active"));
   document
     .querySelector(`.dots__dot[data-slide="${slide}"]`)
@@ -27,4 +27,46 @@ function goSlide(slide) {
     (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
   );
 }
-function nextSlide() {}
+function nextSlide() {
+  if (currentSlide === maxSlide - 1) {
+    currentSlide = 0;
+  } else {
+    currentSlide++;
+  }
+  goSlide(currentSlide);
+  activeDots(currentSlide);
+}
+function preSlide() {
+  if (currentSlide === 0) {
+    currentSlide = maxSlide - 1;
+  } else {
+    currentSlide--;
+  }
+  goSlide(currentSlide);
+  activeDots(currentSlide);
+}
+function init() {
+  goSlide(0);
+  createDot();
+  activeDots(0);
+}
+init();
+
+dotBox.addEventListener("click", function (event) {
+  if (event.target.classList.contains("dots__dot")) {
+    const { slide } = event.target.dataset;
+    goSlide(slide);
+    activeDots(slide);
+  }
+});
+
+btnLeft.addEventListener("click", preSlide);
+btnRight.addEventListener("click", nextSlide);
+document.addEventListener("keydown", function (event) {
+  if (event.key === "ArrowRight") {
+    nextSlide();
+  }
+  if (event.key === "ArrowLeft") {
+    preSlide();
+  }
+});
