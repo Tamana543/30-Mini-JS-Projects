@@ -2,9 +2,11 @@ const input = document.getElementById("text_input"),
   counter = document.getElementById("counter");
 let curText = 0;
 
-document.addEventListener("keypress", (event) => {
-  if (event.key) curText++;
-  else curText;
-  console.log(event.key);
-  counter.textContent = +curText;
+input.addEventListener("keypress", (event) => {
+  let data = [...input.value];
+  const key = event.key;
+  if (key) {
+    curText = data.length;
+  } else curText;
+  counter.textContent = curText;
 });
