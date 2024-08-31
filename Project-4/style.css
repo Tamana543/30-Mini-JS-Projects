@@ -31,6 +31,10 @@ body {
   border-radius: 10%;
   width: 50%;
   height: auto;
+  position: relative;
+}
+.container p {
+  display: inline;
 }
 .text_container {
   display: flex;
@@ -42,10 +46,8 @@ body {
 }
 
 .main_text {
-  /* display: inline-block; */
-  height: fit-content;
   font-size: clamp(0.2rem, 1rem, 1.1rem);
-  line-height: clamp(0rem, 2rem, 2.1rem);
+  line-height: 0%;
 }
 .quote_sign {
   display: inline-block;
@@ -56,9 +58,7 @@ body {
   font-size: clamp(1rem, 3rem, 3.2rem);
   font-weight: 900;
 }
-.quote_sign-2 {
-  align-self: flex-end;
-}
+
 .autor {
   align-self: center;
   justify-self: center;
@@ -84,7 +84,7 @@ body {
   color: #000;
   border-bottom: 1px solid #000;
 }
-button {
+.newBtn {
   font-size: 1rem;
   color: #474646;
   background-image: var(--btn_color);
@@ -96,9 +96,21 @@ button {
   border: 1px solid black;
   border-radius: 10%;
 }
-button:hover {
+.newBtn:hover {
   color: black;
   box-shadow: none;
+}
+.clipboard_btn {
+  margin-top: 1%;
+  width: 1.7rem;
+  height: 1.7rem;
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.2s;
+  right: 1rem;
+}
+.clipboard_btn:hover {
+  transform: scale(1.1);
 }
 @media (max-width: 40rem) {
   .container {
