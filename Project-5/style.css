@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 10px;
+  background-color: rgb(87, 84, 84);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 50%;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s ease;
+}
+#btn {
+  padding: 1.5%;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 5%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  /* display: none; */
+}
+#btn:hover {
+  padding: 0.5% 1.5%;
+  font-size: 1.2rem;
+}
+.hidden {
+  position: absolute;
+  top: -293px;
+}
+.window {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  background-color: aqua;
+  border-radius: 10%;
+  font-size: 1rem;
+  transition: all 1s;
+  z-index: 2222;
+}
+.close {
+  width: 5%;
+  height: 5%;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.2rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+.line_one {
+  position: inherit;
+  top: -2px;
+  transform: rotate(45deg);
+}
+.line_two {
+  position: inherit;
+  top: 0px;
+  transform: rotate(115deg);
+}
+.line_one:hover,
+.line_two:hover {
+  transform: rotate(90deg);
+}
+.text_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.heading {
+  margin: 15% 6% 5% 6%;
+  font-weight: 900;
+  font-size: 1.4rem;
+  text-align: center;
+  line-height: 2rem;
+}
+.para {
+  line-height: 1.5rem;
+  font-size: 1rem;
+  text-align: center;
+}
+form {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#email_input {
+  margin: 8% 0%;
+  height: 35px;
+  width: 14rem;
+  border: none;
+  border-radius: 5%;
+  padding: 5%;
+  font-size: 0.8rem;
+}
+.submit_btn {
+  padding: 5% 10%;
+  font-size: 1rem;
+  border-radius: 5%;
+  border: none;
+  margin-bottom: 3%;
+}
+.submit_btn:hover {
+  background-color: #e4dfdf;
+  cursor: pointer;
+}
