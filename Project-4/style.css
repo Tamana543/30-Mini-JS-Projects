@@ -30,7 +30,7 @@ body {
   color: var(--text_color);
   border-radius: 10%;
   width: 50%;
-  height: 40%;
+  height: auto;
 }
 .text_container {
   display: flex;
@@ -40,11 +40,7 @@ body {
   width: 80%;
   border-bottom: 1px solid #000;
 }
-/* .text_container div {
-  display: flex;
 
-  gap: 2%;
-} */
 .main_text {
   /* display: inline-block; */
   height: fit-content;
@@ -107,6 +103,6 @@ button:hover {
 @media (max-width: 40rem) {
   .container {
     width: 95%;
-    height: 50%;
+    height: auto;
   }
 }
