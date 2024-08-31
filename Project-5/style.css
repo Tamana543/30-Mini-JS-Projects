@@ -19,7 +19,9 @@ body {
   height: 50%;
   overflow: hidden;
   position: relative;
-  transition: all 0.5s ease;
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all o 0.3s ease-in-out;
 }
 #btn {
   padding: 1.5%;
@@ -27,18 +29,18 @@ body {
   border: none;
   border-radius: 5%;
   cursor: pointer;
-  transition: all 0.5s ease;
-  /* display: none; */
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all o 0.3s ease-in-out;
 }
 #btn:hover {
   padding: 0.5% 1.5%;
   font-size: 1.2rem;
 }
-.hidden {
+
+.window {
   position: absolute;
   top: -293px;
-}
-.window {
   display: flex;
   flex-direction: column;
   width: auto;
@@ -46,38 +48,56 @@ body {
   background-color: aqua;
   border-radius: 10%;
   font-size: 1rem;
-  transition: all 1s;
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all o 0.3s ease-in-out;
   z-index: 2222;
 }
 .close {
   width: 5%;
   height: 5%;
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 1.8rem;
+  right: 2rem;
   font-size: 1.2rem;
   font-weight: 900;
   cursor: pointer;
 }
 .line_one {
   position: inherit;
-  top: -2px;
-  transform: rotate(45deg);
+  top: 0px;
+  width: 20px;
+  height: 3px;
+  background-color: #000;
+  margin: 8px auto;
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all o 0.3s ease-in-out;
+  transform: rotate(40deg);
 }
 .line_two {
   position: inherit;
   top: 0px;
-  transform: rotate(115deg);
+  width: 20px;
+  height: 3px;
+  background-color: #000;
+  margin: 8px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all o 0.3s ease-in-out;
+  transform: rotate(130deg);
 }
-.line_one:hover,
-.line_two:hover {
-  transform: rotate(90deg);
+
+.line_two:hover,
+.line_one:hover {
+  transform: rotate(180deg);
 }
 .text_container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  padding: 0% 5%;
 }
 .heading {
   margin: 15% 6% 5% 6%;

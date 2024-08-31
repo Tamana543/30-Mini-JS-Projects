@@ -9,7 +9,7 @@
   <body>
     <div class="container">
       <button type="button" id="btn">Subscribe Now</button>
-      <div class="window hidden">
+      <div class="window">
         <div class="close">
           <span class="line_one"></span>
           <span class="line_two"></span>
@@ -37,11 +37,11 @@
         closeBtn = document.querySelector(".close");
       function closeWindow() {
         btn.style.display = "block";
-        windowEl.classList.toggle("hidden");
+        windowEl.style.top = "-293px";
       }
       btn.addEventListener("click", () => {
+        windowEl.style.top = "0px";
         btn.style.display = "none";
-        windowEl.classList.toggle("hidden");
       });
 
       closeBtn.addEventListener("click", closeWindow);
