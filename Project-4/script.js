@@ -5,9 +5,10 @@ const quoteContainer = document.querySelector(".main_text"),
 
 async function get_quote_of_the_day() {
   const AJAX = await fetch(
-    "https://programming-quotesapi.vercel.app/api/random"
+    ` https://programming-quotesapi.vercel.app/api/random`
   );
   const data = await AJAX.json();
+  console.log(data);
   quoteContainer.textContent = data.quote;
   author.textContent = data.author;
 }

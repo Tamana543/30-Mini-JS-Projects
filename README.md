@@ -11,3 +11,7 @@
 ###### Progect-3 (live character counter)
 
 [Live](https://live-character-counter-taman543.netlify.app/)
+
+###### Project-4 (Quote Generator)
+
+[Live](https://quote-generator-tamana.netlify.app/)
