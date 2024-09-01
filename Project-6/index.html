@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <script defer src="script.js"></script>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: rgb(1, 1, 20);
+      font-size: 10px;
+    }
+    .container {
+      background-color: rgb(1, 1, 37);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 3rem;
+      width: 40%;
+      height: 35%;
+      color: #ffff;
+      position: relative;
+      box-shadow: 0 25px 40px rgb(0, 0, 0, 0.2);
+      border-radius: 5px;
+    }
+    .container::before {
+      content: "";
+      position: absolute;
+      width: 70%;
+      height: 130%;
+      background-color: rgb(65, 78, 253);
+      z-index: -1;
+      border-radius: 5px;
+    }
+    .number {
+      font-size: 3rem;
+    }
+    .btns {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .btn {
+      padding: 1% 10%;
+      font-size: 1.6rem;
+      background-color: rgb(65, 78, 253);
+      color: #ffff;
+      border: none;
+      border-radius: 5px;
+    }
+    .restart {
+      background: none;
+      box-shadow: inset 0px 0px 0px 2px rgb(65, 78, 253);
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1 class="number">1</h1>
+      <div class="btns">
+        <button type="button" class="negative btn">&minus;</button>
+        <button type="button" class="restart btn">&#x21bb;</button>
+        <button type="button " class="plus btn">&plus;</button>
+      </div>
+    </div>
+  </body>
+</html>
