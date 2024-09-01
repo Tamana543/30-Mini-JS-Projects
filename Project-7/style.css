@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(
+    90deg,
+    #000000 0%,
+    #434343 27%,
+    #a9a9a9 75%,
+    #f2f2f2 100%
+  );
+}
+.container {
+  box-shadow: 1px 1px 7px 0px #020202;
+  width: 55%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20%;
+  /* color: #fff; */
+}
+.part_one {
+  width: 95%;
+  text-align: center;
+}
+.heading {
+  margin-bottom: 5%;
+  font-size: 1.7rem;
+  text-transform: capitalize;
+}
+#date_input {
+  width: 90%;
+  height: 40%;
+  font-size: 1.2rem;
+  text-align: center;
+  border: 1px solid #000;
+  background-color: #43434310;
+}
+.part_two {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+.dates {
+  display: flex;
+
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  height: auto;
+  color: rgb(0 0 0 / 74%);
+  border-radius: 50%;
+}
+.date_num {
+  font-weight: bold;
+  color: black;
+}
