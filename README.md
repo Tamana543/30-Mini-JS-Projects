@@ -19,3 +19,7 @@
 ###### Project-5 (Window Popup)
 
 [Live](https://window-popup-tamana.netlify.app/)
+
+###### Project-6 (counter)
+
+[Live](https://counter-tamana.netlify.app/)
