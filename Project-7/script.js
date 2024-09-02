@@ -12,7 +12,7 @@ function timerEn() {
   let hour = date.getHours();
   let min = date.getMinutes();
   let day = date.getDate();
-  return setInterval(function () {
+  setInterval(function () {
     // debugger;
     sec--;
     if (sec < 0) {
@@ -30,11 +30,14 @@ function timerEn() {
 
     let main = Math.abs(day - givenDate.getDate());
 
-    if (main < 0) return;
+    if (main < 0) clearInterval(timerEn);
     dayEl.textContent = main;
     hourEl.textContent = hour;
     minEl.textContent = min;
     secEl.textContent = sec;
   }, 1000);
 }
-inputValue.addEventListener("input", timerEn);
+inputValue.addEventListener("input", () => {
+  if (timerEn) clearInterval(timerEn);
+  timerEn();
+});
