@@ -23,3 +23,7 @@
 ###### Project-6 (counter)
 
 [Live](https://counter-tamana.netlify.app/)
+
+###### Project-7 (Timer)
+
+[Live](https://timer-tamana.netlify.app/)
