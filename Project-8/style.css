@@ -19,10 +19,10 @@ body {
   display: inherit;
   justify-content: center;
   align-items: center;
-  gap: 0.7rem;
+  gap: 1rem;
   color: #fff;
+  font-weight: 700;
 }
 .num {
   color: rgb(0, 128, 0);
-  font-weight: 700;
 }
