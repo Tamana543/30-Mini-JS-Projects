@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Css Changer by Js</title>
+  </head>
+  <body class="flex">
+    <div class="container flex">
+      <h2 class="heading">Change the CSS of below image!</h2>
+      <div class="css_box flex">
+        <div class="width">
+          <label for="width">Width</label>
+          <input type="range" name="Width" id="width" value="10" />
+        </div>
+        <div class="border_radius">
+          <label for="borderRadius">Border Radius</label>
+          <input
+            type="range"
+            name="borderRadius"
+            id="borderRadius"
+            value="10"
+          />
+        </div>
+        <div class="color">
+          <label for="color">Color</label>
+          <input type="color" name="color" id="color" value="#302f2f" />
+        </div>
+
+        <div class="padding">
+          <label for="padding">Padding</label>
+          <input type="range" name="padding" id="padding" value="10" />
+        </div>
+        <div class="blur">
+          <label for="blur">Blur</label>
+          <input type="range" name="blur" id="blur" value="10" />
+        </div>
+      </div>
+      <div class="image_box">
+        <img src="IMG_3.jpeg" alt="image to apply changes" class="main_image" />
+      </div>
+    </div>
+  </body>
+</html>
