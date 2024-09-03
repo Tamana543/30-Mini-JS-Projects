@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+    .flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    body {
+      height: 100vh;
+      background-image: linear-gradient(
+        90deg,
+        #000000 0%,
+        #3b3b3b 19%,
+        #888888 59%,
+        #bcbcbc 70%,
+        #e3e3e3 100%,
+        #f2f2f2 100%
+      );
+    }
+    .container {
+      flex-direction: column;
+      width: 50%;
+      height: 50%;
+      box-shadow: -1px 3px 18px 4px rgb(39, 38, 39);
+    }
+
+    .main {
+      box-shadow: 1px 1px 7px 0px rgb(39, 38, 39);
+      border-radius: 50%;
+      width: 50%;
+      height: 70%;
+      font-size: 200%;
+      gap: 8%;
+      font-weight: 600;
+      margin-bottom: 3%;
+    }
+    .btn_container {
+      width: 70%;
+      justify-content: space-around;
+    }
+    .btn {
+      font-size: 1.5rem;
+      padding: 2% 4%;
+      border-radius: 50%;
+      border: none;
+      box-shadow: inset 1px 1px 7px 0px rgb(39, 38, 39);
+      background: none;
+    }
+    .btn:hover {
+      cursor: pointer;
+      box-shadow: 1px 1px 7px 0px rgb(39, 38, 39);
+    }
+    .stop {
+      transform: rotate(90deg);
+    }
+
+    @media (max-width: 500px) {
+      .main {
+        width: 90%;
+        height: 40%;
+        font-size: 150%;
+      }
+    }
+  </style>
+  <body class="flex">
+    <div class="container flex">
+      <div class="main flex">
+        <div class="hour num">00</div>
+        :
+        <div class="min num">00</div>
+        :
+        <div class="sec num">00</div>
+      </div>
+      <div class="btn_container flex">
+        <button type="button" class="play btn">▶</button>
+        <button type="button" class="stop btn">||</button>
+        <button type="button" class="restart btn">&#9744;</button>
+      </div>
+    </div>
+  </body>
+</html>
