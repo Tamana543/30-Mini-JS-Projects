@@ -5,7 +5,6 @@ const hourEl = document.querySelector(".hour"),
 
 function timeEn() {
   const date = new Date();
-  console.log(date);
   minEl.textContent = date.getMinutes();
   secEl.textContent = date.getSeconds();
   hourEl.textContent = date.getHours();

@@ -27,3 +27,7 @@
 ###### Project-7 (Timer)
 
 [Live](https://timer-tamana.netlify.app/)
+
+###### Project-8 (Digital Clock)
+
+[Live](https://digital-clock-tamana.netlify.app/)
