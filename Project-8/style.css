@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 10px;
+  background-color: rgb(24, 24, 27);
+}
+.container {
+  box-shadow: 1px 1px 7px 0px rgb(0, 128, 0);
+  width: 40%;
+  height: 10%;
+  font-size: 2rem;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  color: #fff;
+}
+.num {
+  color: rgb(0, 128, 0);
+  font-weight: 700;
+}
