@@ -110,65 +110,6 @@ body {
   -webkit-animation: eyes_animation 1.5s ease 2s infinite;
 }
 
-@-moz-keyframes eyes_animation {
-  0% {
-    height: 0px;
-  }
-  15% {
-    height: 57px;
-  }
-  30% {
-    height: 0px;
-  }
-  100% {
-    height: 0px;
-  }
-}
-
-@-webkit-keyframes eyes_animation {
-  0% {
-    height: 0px;
-  }
-  15% {
-    height: 57px;
-  }
-  30% {
-    height: 0px;
-  }
-  100% {
-    height: 0px;
-  }
-}
-
-@-o-keyframes eyes_animation {
-  0% {
-    height: 0px;
-  }
-  15% {
-    height: 57px;
-  }
-  30% {
-    height: 0px;
-  }
-  100% {
-    height: 0px;
-  }
-}
-
-@keyframes eyes_animation {
-  0% {
-    height: 0px;
-  }
-  15% {
-    height: 57px;
-  }
-  30% {
-    height: 0px;
-  }
-  100% {
-    height: 0px;
-  }
-}
 .yellow_part {
   width: 57px;
   height: 57px;
@@ -1262,66 +1203,6 @@ li.h12 {
   animation: hand_animate 2s ease 1s infinite;
 }
 
-@-moz-keyframes hand_animate {
-  0% {
-    -moz-transform: rotate(40deg);
-  }
-  50% {
-    -moz-transform: rotate(70deg);
-  }
-  100% {
-    -moz-transform: rotate(40deg);
-  }
-}
-
-@-webkit-keyframes hand_animate {
-  0% {
-    -webkit-transform: rotate(40deg);
-  }
-  50% {
-    -webkit-transform: rotate(70deg);
-  }
-  100% {
-    -webkit-transform: rotate(40deg);
-  }
-}
-
-@-ms-keyframes hand_animate {
-  0% {
-    -ms-transform: rotate(40deg);
-  }
-  50% {
-    -ms-transform: rotate(70deg);
-  }
-  100% {
-    -ms-transform: rotate(40deg);
-  }
-}
-
-@-o-keyframes hand_animate {
-  0% {
-    -o-transform: rotate(40deg);
-  }
-  50% {
-    -o-transform: rotate(70deg);
-  }
-  100% {
-    -o-transform: rotate(40deg);
-  }
-}
-
-@keyframes hand_animate {
-  0% {
-    transform: rotate(40deg);
-  }
-  50% {
-    transform: rotate(70deg);
-  }
-  100% {
-    transform: rotate(40deg);
-  }
-}
-
 .gloves_lh {
   width: 35px;
   height: 30px;
@@ -1514,6 +1395,125 @@ li.h12 {
   -ms-transform: rotate(3deg) !important;
   -o-transform: rotate(3deg) !important;
   transform: rotate(3deg) !important;
+}
+@-moz-keyframes eyes_animation {
+  0% {
+    height: 0px;
+  }
+  15% {
+    height: 57px;
+  }
+  30% {
+    height: 0px;
+  }
+  100% {
+    height: 0px;
+  }
+}
+
+@-webkit-keyframes eyes_animation {
+  0% {
+    height: 0px;
+  }
+  15% {
+    height: 57px;
+  }
+  30% {
+    height: 0px;
+  }
+  100% {
+    height: 0px;
+  }
+}
+
+@-o-keyframes eyes_animation {
+  0% {
+    height: 0px;
+  }
+  15% {
+    height: 57px;
+  }
+  30% {
+    height: 0px;
+  }
+  100% {
+    height: 0px;
+  }
+}
+
+@keyframes eyes_animation {
+  0% {
+    height: 0px;
+  }
+  15% {
+    height: 57px;
+  }
+  30% {
+    height: 0px;
+  }
+  100% {
+    height: 0px;
+  }
+}
+
+@-moz-keyframes hand_animate {
+  0% {
+    -moz-transform: rotate(40deg);
+  }
+  50% {
+    -moz-transform: rotate(70deg);
+  }
+  100% {
+    -moz-transform: rotate(40deg);
+  }
+}
+
+@-webkit-keyframes hand_animate {
+  0% {
+    -webkit-transform: rotate(40deg);
+  }
+  50% {
+    -webkit-transform: rotate(70deg);
+  }
+  100% {
+    -webkit-transform: rotate(40deg);
+  }
+}
+
+@-ms-keyframes hand_animate {
+  0% {
+    -ms-transform: rotate(40deg);
+  }
+  50% {
+    -ms-transform: rotate(70deg);
+  }
+  100% {
+    -ms-transform: rotate(40deg);
+  }
+}
+
+@-o-keyframes hand_animate {
+  0% {
+    -o-transform: rotate(40deg);
+  }
+  50% {
+    -o-transform: rotate(70deg);
+  }
+  100% {
+    -o-transform: rotate(40deg);
+  }
+}
+
+@keyframes hand_animate {
+  0% {
+    transform: rotate(40deg);
+  }
+  50% {
+    transform: rotate(70deg);
+  }
+  100% {
+    transform: rotate(40deg);
+  }
 }
 @media (max-width: 500px) {
   .jerry {
