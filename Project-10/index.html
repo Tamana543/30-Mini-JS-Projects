@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stopwatch</title>
+    <script defer src="script.js"></script>
   </head>
   <style>
     * {
@@ -56,15 +57,16 @@
       border: none;
       box-shadow: inset 1px 1px 7px 0px rgb(39, 38, 39);
       background: none;
+      width: 27%;
+      height: 110%;
     }
     .btn:hover {
       cursor: pointer;
       box-shadow: 1px 1px 7px 0px rgb(39, 38, 39);
     }
     .stop {
-      transform: rotate(90deg);
+      font-size: 1rem;
     }
-
     @media (max-width: 500px) {
       .main {
         width: 90%;
@@ -76,16 +78,16 @@
   <body class="flex">
     <div class="container flex">
       <div class="main flex">
-        <div class="hour num">00</div>
-        :
         <div class="min num">00</div>
         :
         <div class="sec num">00</div>
+        :
+        <div class="mili_sec num">00</div>
       </div>
       <div class="btn_container flex">
-        <button type="button" class="play btn">▶</button>
-        <button type="button" class="stop btn">||</button>
-        <button type="button" class="restart btn">&#9744;</button>
+        <button type="button" class="play btn flex">&#9658;</button>
+        <button type="button" class="stop btn flex">&#9616;&#9616;</button>
+        <button type="button" class="restart btn flex">&#9744;</button>
       </div>
     </div>
   </body>
