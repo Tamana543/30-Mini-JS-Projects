@@ -6,6 +6,9 @@
   padding: 0;
   margin: 0;
 }
+html {
+  height: 100vh;
+}
 body {
   display: flex;
   justify-content: center;
@@ -666,18 +669,29 @@ body {
   -webkit-transform: scale(0.9);
   transform: scale(0.9);
   top: 168px;
-  left: 30px;
+  left: 56px;
   z-index: 9999;
+  border-bottom-left-radius: 70px;
+  border-bottom-right-radius: 70px;
 }
 .logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 110px;
+  width: 50px;
   height: 9px;
   font-size: 10px;
-  /* border: 1px dotted #fff; */
-  border: dotted 1px #fff;
+  border: 1px dotted #fff;
+  z-index: 9999;
+  color: #fff;
+}
+.lines {
+  width: 50px;
+  height: 35px;
+  border: 1px dotted #fff;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background-color: #231f20;
 }
 .jerry_bottom {
   background: #35668f;
@@ -802,7 +816,16 @@ body {
   -o-transform: scaleX(-1);
   transform: scaleX(-1);
 }
-
+.jerry_angry {
+  width: 64px;
+  height: 5px;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  background-color: #2b2b2b;
+  top: 112px;
+  left: 45px;
+  display: none;
+}
 .jerry_smile {
   width: 64px;
   height: 17px;
