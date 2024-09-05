@@ -39,3 +39,7 @@
 ###### Project-10 (Stopwatch)
 
 [Live](https://stopwatch-tamana.netlify.app/)
+
+###### Project-11 (Eye Watching)
+
+[Live](https://tamana543.github.io/Jerry-Minions-/)
