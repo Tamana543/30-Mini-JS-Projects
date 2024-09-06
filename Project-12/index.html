@@ -65,9 +65,7 @@
       bottom: -11px !important;
       left: 1px;
     }
-    .two:hover {
-      transform: rotate(90deg);
-    }
+
     .head {
       font-size: 1.1rem;
       display: flex;
@@ -80,7 +78,9 @@
       font-size: 0.8rem;
       padding: 0% 2%;
       transition: all 0.8s ease-in-out;
-      /* display: none; */
+    }
+    .hidden {
+      display: none;
     }
     .dom_event {
       padding: 2%;
@@ -129,6 +129,10 @@
         margin: 2%;
         width: 100%;
       }
+      .two {
+        left: -1px;
+        top: -14px;
+      }
     }
   </style>
   <body>
@@ -136,37 +140,37 @@
       <h3 class="heading">Dynamic Accordion :)</h3>
       <div class="main">
         <ul class="lists">
-          <li class="head" data-set="html">
+          <li class="head" data-head="html">
             <p>What is HTML?</p>
             <p class="open">
               <span class="one">|</span> <span class="two">|</span>
             </p>
           </li>
-          <li class="description" data-set="html">
+          <li class="description hidden" data-head="html">
             HTML stand for HyperText Markup Language. It used to structur web
             pages using a markup language.
           </li>
         </ul>
         <ul class="lists">
-          <li class="head" data-set="css">
+          <li class="head" data-head="css">
             What is CSS?
             <p class="open">
               <span class="one">|</span> <span class="two">|</span>
             </p>
           </li>
-          <li class="description" data-set="css">
+          <li class="description hidden" data-head="css">
             CSS stand for Cascating Style Sheet. It used to design web pages
             using a markup language.
           </li>
         </ul>
         <ul class="lists">
-          <li class="head" data-set="javaScript">
+          <li class="head" data-head="javaScript ">
             What is JavaScript?
             <p class="open">
               <span class="one">|</span> <span class="two">|</span>
             </p>
           </li>
-          <li class="description" data-set="javaScript">
+          <li class="description hidden" data-head="javaScript ">
             Javascript is a programming language . It used to add functionality
             to the web pages using a real programming language.
           </li>
