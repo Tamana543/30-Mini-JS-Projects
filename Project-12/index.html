@@ -181,16 +181,23 @@
       </div>
       <div class="dom_event">
         <h3 class="dom_head">Add Custom</h3>
-        <div class="custom_container">
-          <input type="text" name="tittle" id="head" placeholder="Tittle" />
+        <form class="custom_container">
+          <input
+            type="text"
+            name="tittle"
+            id="head"
+            placeholder="What is ... ?"
+            required
+          />
           <input
             type="text"
             name="description"
             id="description"
             placeholder="Description"
+            required
           />
-          <input type="button" value="Add Item" id="btn" />
-        </div>
+          <button type="submit" id="btn">Add Item</button>
+        </form>
       </div>
     </div>
   </body>
