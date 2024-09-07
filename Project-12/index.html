@@ -56,7 +56,7 @@
     }
     .open span {
       position: inherit;
-      bottom: -10px;
+      bottom: -14px;
       cursor: pointer;
       transition: all 0.5s ease-in-out;
     }
@@ -77,10 +77,13 @@
     .description {
       font-size: 0.8rem;
       padding: 0% 2%;
-      transition: all 0.8s ease-in-out;
-    }
-    .hidden {
+      transition: all 5s ease-in-out;
       display: none;
+      min-height: 0%;
+    }
+    .active {
+      display: block;
+      min-height: 100%;
     }
     .dom_event {
       padding: 2%;
@@ -146,7 +149,7 @@
               <span class="one">|</span> <span class="two">|</span>
             </p>
           </li>
-          <li class="description hidden" data-head="html">
+          <li class="description" data-head="html">
             HTML stand for HyperText Markup Language. It used to structur web
             pages using a markup language.
           </li>
@@ -158,7 +161,7 @@
               <span class="one">|</span> <span class="two">|</span>
             </p>
           </li>
-          <li class="description hidden" data-head="css">
+          <li class="description" data-head="css">
             CSS stand for Cascating Style Sheet. It used to design web pages
             using a markup language.
           </li>
@@ -170,7 +173,7 @@
               <span class="one">|</span> <span class="two">|</span>
             </p>
           </li>
-          <li class="description hidden" data-head="javaScript ">
+          <li class="description" data-head="javaScript ">
             Javascript is a programming language . It used to add functionality
             to the web pages using a real programming language.
           </li>

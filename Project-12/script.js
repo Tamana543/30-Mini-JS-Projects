@@ -5,26 +5,26 @@ const headEl = document.querySelectorAll(".head"),
   submitBtn = document.getElementById("btn"),
   mainEl = document.querySelector(".main"),
   openBtn = document.querySelectorAll(".open");
-
-openBtn.forEach((ele) => {
-  //   console.log(headEl[0].dataset);
-  //   console.log(ele.dataset);
-  ele.addEventListener("click", function () {
-    //     debugger;
-    //     console.log(this.dataset);
-    const data = headEl.forEach((ele) => ele.dataset);
+const parent = document.querySelector(".lists");
+headEl.forEach((head) => {
+  head.addEventListener("click", () => {
+    const item = head.parentElement;
+    console.log(item);
+    const content = item.querySelector(".description");
     descriptionEl.forEach((ele) => {
-      if (ele.dataset === data) {
-        ele.style.display = "block";
+      if (ele !== content) {
+        ele.classList.remove("active");
+        item.querySelector(".two").style.transform = `rotate(90deg)`;
       } else {
-        console.log(ele.dataset.head);
-        console.log(data);
       }
-      // ele.dataset === headEl.dataset ? (ele.style.display = "block") : "Bugg";
     });
-    //     document.querySelector(".two").style.transform = "rotate(90deg)";
-    //     if (this.dataset === descriptionEl.dataset) {
-    //       console.log(`Hello`);
-    //     }
+    content.classList.toggle("active");
+    if (content.classList.contains("active")) {
+      item.querySelector(".two").style.transform = `rotate(90deg)`;
+      content.style.minHeight = content.scrollHeight + "px";
+    } else {
+      item.querySelector(".two").style.transform = `rotate(0deg)`;
+      content.style.minHeight = "0px";
+    }
   });
 });
