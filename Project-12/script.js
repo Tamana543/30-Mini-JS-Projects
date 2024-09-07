@@ -46,6 +46,10 @@ submitBtn.addEventListener("click", (event) => {
     mainEl.insertAdjacentHTML("beforeend", html);
     console.log(headEl);
     const head = Array(...headEl);
+    /**
+     * item.appendChild(head);
+     * item.appendChild(des)
+     */
 
     console.log(head);
 
