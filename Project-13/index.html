@@ -5,7 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
-    <title>Document</title>
+    <title>Generate Password</title>
   </head>
-  <body></body>
+  <body class="flex">
+    <div class="container flex">
+      <h3 class="heading">Password Generator :)</h3>
+      <p class="topic">
+        Generate a strong, unique password with just a few clicks.
+      </p>
+
+      <div class="password_field flex">
+        <label for="password" class="password_label">Password Length:</label>
+        <div>
+          <input
+            type="text"
+            class="password_label-input"
+            placeholder="Get your password form here..:)"
+          />
+          <img
+            src="writing-pad-clipboard-icon (1).svg"
+            alt="copy_icon"
+            class="icon"
+          />
+        </div>
+      </div>
+      <div class="check_points">
+        <p class="include">Include :</p>
+        <input type="checkbox" name="uppercase" id="uppercase" />
+        <label for="uppercase"> Uppercase</label>
+        <input type="checkbox" name="lowercase" id="lowercase" />
+        <label for="lowercase"> lowercase</label>
+        <input type="checkbox" name="number" id="number" />
+        <label for="number"> Number</label>
+        <input type="checkbox" name="symbol" id="symbol" />
+        <label for="symbol"> symbol</label>
+      </div>
+      <button type="submit" class="submit">Generate</button>
+    </div>
+  </body>
 </html>

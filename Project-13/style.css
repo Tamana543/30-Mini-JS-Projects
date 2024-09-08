@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  font-size: 10px;
+  min-height: 100vh;
+}
+.container {
+  width: 80%;
+  height: auto;
+  flex-direction: column;
+  background-color: rgba(240, 255, 246, 0.473);
+  box-shadow: 1px 3px 5px 0px #ada6a6;
+  border-radius: 3%;
+}
+.heading {
+  font-size: 2rem;
+  margin: clamp(0rem, 2rem, 2.1rem);
+  font-weight: 900;
+}
+.topic {
+  font-size: 1.1rem;
+  color: #00000070;
+  margin-bottom: 1.7rem;
+}
+.password_field {
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 1.1rem;
+  width: 80%;
+}
+input:focus {
+  outline: none;
+}
+.password_label {
+  color: #0000008e;
+  font-weight: 900;
+}
+.password_label-input {
+  width: 80%;
+  padding: 0.5rem;
+  border: none;
+}
+.password_label-input:focus {
+  box-shadow: 1px 1px 2px 0px #000;
+}
+.password_field div {
+  position: relative;
+  width: 100%;
+}
+.icon {
+  position: fixed;
+  width: 3%;
+  height: 4%;
+  cursor: pointer;
+}
+.icon:hover {
+  width: 4%;
+  height: 5%;
+}
+.check_points {
+  width: 80%;
+  height: 100%;
+  font-size: 1rem;
+  text-align: center;
+}
+.include {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #0000008e;
+  margin: 3%;
+}
+.check_points label {
+  font-size: 1.1rem;
+  margin: 2%;
+  color: #000000be;
+}
+.check_points input {
+  cursor: pointer;
+}
+.submit {
+  font-size: 1.1rem;
+  padding: 1%;
+  margin: 2%;
+  border: none;
+  color: rgb(39, 39, 39);
+  background-color: rgb(149, 205, 241);
+  border-radius: 5%;
+  cursor: pointer;
+}
+.submit:hover {
+  box-shadow: 2px 1px 4px 0px #000;
+}
+@media (max-width: 500px) {
+  .heading {
+    font-size: 1.53rem;
+  }
+  .topic {
+    font-size: 1rem;
+    padding: 2%;
+    text-align: center;
+  }
+  .icon {
+    width: 5%;
+    height: 4%;
+  }
+  .check_points {
+    width: 68%;
+  }
+}
