@@ -44,19 +44,20 @@ input:focus {
   font-weight: 900;
 }
 .password_label-input {
-  width: 80%;
   padding: 0.5rem;
   border: none;
-}
-.password_label-input:focus {
-  box-shadow: 1px 1px 2px 0px #000;
-}
-.password_field div {
+  display: inline-block;
+  color: #000000a1;
+  /* box-shadow: 1px 1px 2px 0px #000; */
+  /* border: 1px solid #000000a1; */
+  outline: 0.1px dashed #000000a1;
   position: relative;
-  width: 100%;
+  width: 50%;
 }
+
 .icon {
   position: fixed;
+  margin-left: 7%;
   width: 3%;
   height: 4%;
   cursor: pointer;
