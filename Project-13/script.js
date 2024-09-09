@@ -18,17 +18,16 @@ function generatPassword() {
   const numberEn = "0 1 2 3 4 5 6 7 8 9";
   let outpot = "";
 
-  if (upperCase) outpot += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  if (lowerCase) outpot += "abcdefghijklmnopqrstuvwxyz";
+  if (upperCase) outpot += upperCaseEng;
+  if (lowerCase) outpot += passwordMain;
   if (number) outpot += numberEn;
   if (symbol) outpot += "~!@#$%^&*()_-+=,'/?<>:;";
   for (let i = 0; i < 12; i++) {
-    let randomEng = outpot[Math.floor(Math.random() * outpot.length)];
+    let randomEng = outpot[Math.floor(Math.random() * 12)];
     password += randomEng;
   }
+
   passwordInput.textContent = password;
-  // passwordInput.textContent = outpot;
-  console.log(outpot);
 }
 copyIcon.addEventListener("click", copyEn);
 //

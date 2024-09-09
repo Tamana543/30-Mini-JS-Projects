@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skroll Bar Generator</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+      position: relative;
+    }
+    .skroll_bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2%;
+      background-color: red;
+      animation: scrollbar linear;
+      animation-timeline: scroll();
+    }
+    @keyframes scrollbar {
+      from {
+        width: 0px;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    .container {
+      margin-top: 5%;
+      display: flex;
+      flex-direction: column;
+      gap: 2%;
+    }
+    .numbers {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: rgb(233, 149, 149);
+      width: 180%;
+      height: 18%;
+      font-size: 50px;
+    }
+  </style>
+  <body>
+    <div class="skroll_bar"></div>
+    <div class="container">
+      <div class="numbers"></div>
+    </div>
+    <script>
+      const container = document.querySelector(".container");
+      const number = [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+      ];
+      for (let i = 0; i < number.length; i++) {
+        const html = `
+      <div class="numbers">${i + 1}</div>
+    </div>`;
+        container.insertAdjacentHTML("beforeend", html);
+      }
+    </script>
+  </body>
+</html>
