@@ -6,11 +6,14 @@
     <link rel="stylesheet" href="style.css" />
     <title>Captcha Generator</title>
   </head>
-  <body>
-    <div class="container">
-      <div class="captha_image"></div>
-      <button type="button" class="reload">&</button>
-      <input type="text" class="text" />
+  <body class="flex">
+    <div class="container flex">
+      <div class="part_one flex">
+        <div class="captha_image"></div>
+        <button type="button" class="reload">&#9658;</button>
+      </div>
+      <input type="text" class="text" placeholder="write the captche here :)" />
+
       <button type="button" class="submit">Submit</button>
     </div>
   </body>

@@ -1,11 +1,50 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-boxs;
+  box-sizing: border-box;
 }
 body {
+  height: 100vh;
+}
+button {
+  cursor: pointer;
+}
+.flex {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+}
+.container {
+  flex-direction: column;
+  background-color: rgba(243, 216, 198, 0.521);
+  width: 50%;
+  height: 50%;
+}
+.part_one {
+  width: 70%;
+  height: 20%;
+}
+.captha_image {
+  border: 1px dashed #000;
+  width: 50%;
+  height: 66%;
+}
+.reload {
+  margin-left: 3%;
+  padding: 2% 3%;
+  /* border: navy; */
+  font-size: 20px;
+  border: 0.5px solid black;
+}
+.text {
+  width: 46%;
+  height: 25%;
+  margin: 2%;
+  border: 1px dashed black;
+  padding: 2%;
+}
+.submit {
+  padding: 1% 3%;
+  font-size: 18px;
+  border: 0.3px solid #000;
 }
