@@ -29,6 +29,8 @@ button {
   border: 1px dashed #000;
   width: 50%;
   height: 66%;
+  font-size: 2rem;
+  text-align: center;
 }
 button {
   background-color: rgb(165, 87, 238);

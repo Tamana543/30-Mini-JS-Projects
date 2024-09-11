@@ -5,7 +5,7 @@ const imageContainer = document.querySelector(".captha_image"),
 
 let code;
 function captionMakerEn() {
-  debugger;
+  // debugger;
   imageContainer.textContent = "";
   const input =
     "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*:";
@@ -25,14 +25,18 @@ function captionMakerEn() {
   ctx.font = "25px Georgia";
   ctx.strokeText(captcha.join(""), 0, 30);
   code = captcha.join("");
-  document.getElementById("captcha").appendChild(imageConv); //add the canvas to the body element
+
+  imageContainer.appendChild(imageConv); //add the canvas to the body element
 }
 function validationEn(event) {
   event.preventDefault();
   if (capInput.value == code) {
     alert("Well Done");
+    imageContainer.textContent = "";
+    capInput.value = "";
   } else {
     alert("Try Again ;)");
+
     captionMakerEn();
   }
 }
