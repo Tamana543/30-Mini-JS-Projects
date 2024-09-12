@@ -54,4 +54,4 @@
 
 ###### Project-15 (Captcha Maker by js)
 
-[Live](https://captcha-tamana.netlify.app/)
+[Live](https://captcha-generator-tamana.netlify.app/)
