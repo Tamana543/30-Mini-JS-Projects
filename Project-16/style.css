@@ -43,6 +43,9 @@ body {
 .hide {
   display: none;
 }
+.display {
+  display: block;
+}
 .text_box {
   background-color: #fff;
   color: black;
