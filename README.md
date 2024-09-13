@@ -55,3 +55,7 @@
 ###### Project-15 (Captcha Maker by js)
 
 [Live](https://captcha-generator-tamana.netlify.app/)
+
+###### Project-16 (Tabs by JS)
+
+[Live](https://tabs-by-js-tamana.netlify.app/)
