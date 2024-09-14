@@ -59,3 +59,7 @@
 ###### Project-16 (Tabs by JS)
 
 [Live](https://tabs-by-js-tamana.netlify.app/)
+
+###### Project-17 (Alert animation)
+
+[Live](https://alarm-animation-tamana.netlify.app/)
