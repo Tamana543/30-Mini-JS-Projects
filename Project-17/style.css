@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.774);
+}
+.container {
+  width: 40%;
+  height: auto;
+  border: 1px solid rgb(19, 182, 247);
+}
