@@ -16,4 +16,73 @@ body {
   width: 40%;
   height: auto;
   border: 1px solid rgb(19, 182, 247);
+  flex-direction: column;
+  padding: 3%;
+}
+.bill {
+  width: 90%;
+  height: 220px;
+  position: relative;
+}
+.counter {
+  position: absolute;
+  top: 14%;
+  right: 9%;
+  width: 25px;
+  height: 25px;
+  color: #fff;
+  border-radius: 50%;
+  background-color: rgb(19, 182, 247);
+}
+.clock {
+  width: 57%;
+  height: 150px;
+  background: none;
+}
+
+.transition {
+  animation: shake 0.07s ease-in-out forwards;
+}
+.btn {
+  font-size: 20px;
+  padding: 3% 3.5%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  background-color: rgb(19, 182, 247);
+}
+@keyframes shake {
+  0% {
+    transform: rotate(-50deg);
+  }
+  10% {
+    transform: rotate(-40deg);
+  }
+  20% {
+    transform: rotate(-30deg);
+  }
+  30% {
+    transform: rotate(-20deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  70% {
+    transform: rotate(20deg);
+  }
+  80% {
+    transform: rotate(30deg);
+  }
+  90% {
+    transform: rotate(40deg);
+  }
+  100% {
+    transform: rotate(50deg);
+  }
 }
