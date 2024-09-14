@@ -4,9 +4,12 @@ const counterEl = document.querySelector(".counter"),
 
 let clickCount = 0;
 function alarmEn() {
-  alarmEl.classList.toggle("transition");
-
   clickCount++;
   counterEl.textContent = clickCount;
+
+  alarmEl.classList.toggle("transition");
 }
 notifyBtn.addEventListener("click", alarmEn);
+alarmEl.addEventListener("animationend", function () {
+  alarmEl.classList.remove("transition");
+});
