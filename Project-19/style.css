@@ -36,19 +36,27 @@ body {
   left: 10px;
   z-index: 111;
 }
+.line:hover {
+  animation: move 1s ease-in-out forwards;
+}
 .number {
   position: absolute;
   display: inline-flex;
   width: 1.4rem;
   border-radius: 50%;
-  border: 2px solid greenyellow;
+  border: 2px solid rgba(49, 49, 80, 0.938);
   top: 0;
   z-index: 222;
   background-color: rgb(16, 16, 31);
   margin-top: 1%;
 }
+
+.number:hover {
+  animation: line_move 0.5s ease-in-out forwards;
+}
 .one {
   left: 1%;
+  border: 2px solid greenyellow;
 }
 .two {
   left: 28%;
@@ -81,4 +89,20 @@ body {
 .btn:hover {
   background-color: rgb(75, 250, 250);
   color: #000;
+}
+.color_move {
+  animation: move 0.5s ease-in-out forward;
+}
+@keyframes move {
+  100% {
+    background-color: greenyellow;
+  }
+  /* 50% {
+            background-color: greenyellow;
+            } */
+}
+@keyframes line_move {
+  100% {
+    border: 2px solid greenyellow;
+  }
 }
