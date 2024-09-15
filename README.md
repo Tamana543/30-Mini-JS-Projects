@@ -63,3 +63,7 @@
 ###### Project-17 (Alert animation)
 
 [Live](https://alarm-animation-tamana.netlify.app/)
+
+###### Project-18 (Search Bar)
+
+[Live](https://searchbar-tamana.netlify.app/)
