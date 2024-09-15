@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Searchbar</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+    .flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    body {
+      min-height: 100vh;
+      background-color: rgba(0, 0, 0, 0.541);
+    }
+    .container {
+      width: 28%;
+      transition: all 0.9s ease-in-out;
+    }
+    .open_tran {
+      transition: open 0.9s ease-in-out forwards;
+    }
+    .close_ran {
+      transition: close 0.9s ease-in-out forwards;
+    }
+    .searchbar {
+      background-color: rgba(253, 253, 253, 0.959);
+      width: 100%;
+      height: 2.9rem;
+      /* border-radius: 5px; */
+      border: none;
+      padding-left: 2%;
+    }
+    .btn {
+      /* height: 2.9rem; */
+      padding: 5.1% 3%;
+      z-index: 2222;
+      border-radius: 2px;
+      border: none;
+      background-color: rgba(253, 253, 253, 0.959);
+      font-size: 1rem;
+      filter: grayscale(1);
+    }
+    .search {
+      border-left: 1px solid black;
+    }
+    .close {
+      border-right: 1px solid black;
+    }
+    @keyframes open {
+      0% {
+        width: 0%;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+    @keyframes close {
+      0% {
+        width: 100%;
+      }
+      100% {
+        width: 0%;
+      }
+    }
+  </style>
+  <body class="flex">
+    <div class="container flex">
+      <button type="button" class="btn close">❌</button>
+      <input class="searchbar flex" placeholder="Type to search..." />
+      <button type="button" class="btn search">🔍</button>
+    </div>
+  </body>
+</html>
