@@ -81,6 +81,15 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+.btn:disabled {
+  background-color: rgba(8, 245, 245, 0.082);
+  cursor: not-allowed;
+}
+
+.btn:disabled:hover {
+  background-color: rgba(8, 245, 245, 0.082);
+}
+
 .btn:hover {
   background-color: rgb(75, 250, 250);
   color: #000;
@@ -89,10 +98,10 @@ body {
   animation: move 0.5s ease forward;
 }
 .line_animation {
-  animation: move 1s ease forwards;
+  animation: move 2s ease forwards;
 }
 .number_animation {
-  animation: line_move 0.5s ease-in-out forwards;
+  animation: line_move 0.3s ease-in-out forwards;
 }
 @keyframes move {
   100% {
