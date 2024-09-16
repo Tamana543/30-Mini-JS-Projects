@@ -56,13 +56,13 @@ body {
   border: 2px solid greenyellow;
 }
 .two {
-  left: 28%;
+  left: 26%;
 }
 .three {
-  right: 43%;
+  right: 46%;
 }
 .four {
-  right: 20%;
+  right: 21%;
 }
 .five {
   top: 2%;
@@ -116,11 +116,12 @@ body {
   }
 }
 @media (max-width: 500px) {
-  .line {
-    margin-top: 0.3rem;
+  .container {
+    width: 90%;
   }
+
   .two {
-    left: 21%;
+    left: 22%;
   }
   .btn {
     width: 40%;

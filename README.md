@@ -67,3 +67,7 @@
 ###### Project-18 (Search Bar)
 
 [Live](https://searchbar-tamana.netlify.app/)
+
+###### Project-19 (JS_Timeline)
+
+[Live](https://timeline-js-tamana.netlify.app/)
