@@ -14,11 +14,11 @@ function moveEnForword() {
   });
 
   // moveEnForword();
-  const movedNum = document.querySelector(".number_animation");
+  const movedNum = document.querySelectorAll(".number_animation");
+
   line.style.width = `${
     ((movedNum.length - 1) / (numberEl.length - 1)) * 100
   }%`;
-  console.log(`${((movedNum.length - 1) / (numberEl.length - 1)) * 100}%`);
   if (move === 1) {
     previousBtn.disabled = true;
   } else if (move === numberEl.length) {
