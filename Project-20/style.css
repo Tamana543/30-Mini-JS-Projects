@@ -62,13 +62,28 @@ body {
 .blue_box {
   background-color: blue;
 }
+/* .red_box {
+  display: none;
+}
+.green_box {
+  display: none;
+}
+.blue_box {
+  display: none;
+} */
 .boxes {
   width: auto;
   height: 70%;
   gap: 5%;
   margin-top: 5%;
+  flex-wrap: wrap;
 }
 .boxes span {
   width: 8rem;
   height: 3.2rem;
+}
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
 }
