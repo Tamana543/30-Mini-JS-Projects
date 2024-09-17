@@ -71,3 +71,7 @@
 ###### Project-19 (JS_Timeline)
 
 [Live](https://timeline-js-tamana.netlify.app/)
+
+###### Project-20 (sorting tabs)
+
+[Live](https://sortingtabs-tamana.netlify.app/)
