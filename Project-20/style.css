@@ -18,9 +18,10 @@ body {
   grid-template-rows: repeat(4, 1fr);
 }
 .container {
-  border: 1px solid red;
+  flex-direction: column;
   width: 50%;
   height: 50%;
+  position: relative;
 }
 .main_boxes {
   width: 100%;
@@ -49,12 +50,25 @@ body {
     #0078ff 100%
   );
 }
-.red_btn {
+.red_btn,
+.red_box {
   background-color: red;
 }
-.green_btn {
+.green_btn,
+.green_box {
   background-color: green;
 }
-.blue_btn {
+.blue_btn,
+.blue_box {
   background-color: blue;
+}
+.boxes {
+  width: auto;
+  height: 70%;
+  gap: 5%;
+  margin-top: 5%;
+}
+.boxes span {
+  width: 8rem;
+  height: 3.2rem;
 }
