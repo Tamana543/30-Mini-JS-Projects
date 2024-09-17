@@ -36,6 +36,10 @@ body {
   border: none;
   color: #fff;
   border-radius: 8%;
+  cursor: pointer;
+}
+.btn:hover {
+  box-shadow: 2px 2px 5px 0px #5c5656;
 }
 .all_btn {
   background-image: linear-gradient(
@@ -62,7 +66,7 @@ body {
 .blue_box {
   background-color: blue;
 }
-/* .red_box {
+.red_box {
   display: none;
 }
 .green_box {
@@ -70,7 +74,7 @@ body {
 }
 .blue_box {
   display: none;
-} */
+}
 .boxes {
   width: auto;
   height: 70%;
