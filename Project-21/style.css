@@ -8,6 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: #000000de;
 }
 .container {
   display: flex;
@@ -22,7 +23,6 @@ body {
   background-image: url(Earth_svg.jfif);
   width: 11rem;
   height: 10rem;
-
   background-size: 200%;
   border-radius: 50%;
   transition: transform 100ms linear;
@@ -43,6 +43,25 @@ body {
   border-radius: 50%;
 }
 
+.head {
+  color: #fff;
+  font-family: sans-serif;
+}
+.text_moved {
+  font-family: cursive;
+}
+.beautifull {
+  color: red;
+}
+.incridible {
+  color: rebeccapurple;
+}
+.fantastic {
+  color: gold;
+}
+.amazing {
+  color: pink;
+}
 @keyframes turn {
   0% {
     background-position-x: 0%;
@@ -53,6 +72,10 @@ body {
 }
 @media (max-width: 500px) {
   .container {
-    height: 22%;
+    height: 26%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
   }
 }
