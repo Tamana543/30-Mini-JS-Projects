@@ -14,20 +14,41 @@ body {
   flex-direction: column;
   justify-content: space-between;
   gap: 2%;
+
   height: 30%;
 }
-.Earth_image {
-  width: 90%;
-  height: 90%;
-  animation: turn 5s infinite linear;
+.box {
+  position: relative;
+  background-image: url(Earth_svg.jfif);
+  width: 11rem;
+  height: 10rem;
+
+  background-size: 200%;
+  border-radius: 50%;
   transition: transform 100ms linear;
+  animation: turn 7s infinite linear;
+  box-shadow: inset -6px -1px 9px 0px #000000cc;
+  transform-style: preserve-3d;
 }
+.box::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  opacity: 0.1;
+  background: radial-gradient(circle at 10rem 10rem, #ffffff8f, #000000da);
+  border-radius: 50%;
+}
+
 @keyframes turn {
   0% {
-    transform: rotate(0deg);
+    background-position-x: 0%;
   }
   100% {
-    transform: rotateY(-360deg);
+    background-position-x: 200%;
   }
 }
 @media (max-width: 500px) {
