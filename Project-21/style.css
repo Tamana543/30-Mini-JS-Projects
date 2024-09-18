@@ -30,6 +30,9 @@ body {
   box-shadow: inset -6px -1px 9px 0px #000000cc;
   transform-style: preserve-3d;
 }
+.box:hover {
+  animation-delay: 2s;
+}
 .box::before {
   content: "";
   width: 100%;
