@@ -65,6 +65,24 @@ body {
 .amazing {
   color: pink;
 }
+.letter {
+  float: left;
+  transform-origin: 50% 50% 20px;
+}
+
+.letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.58s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 @keyframes turn {
   0% {
     background-position-x: 0%;
