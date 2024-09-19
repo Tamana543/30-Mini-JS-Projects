@@ -22,18 +22,6 @@ function change(word) {
   }
 
   text.push(letters);
-
-  // other way for making this function working
-  // textMovedAll.forEach(function (word) {
-  //   // word.style.display = "none";
-  //   word.style.opacity = "0";
-  // });
-  // textMovedAll[currentLetter].style.opacity = "1";
-  // currentLetter++;
-
-  // if (currentLetter > textMovedAll.length - 1) {
-  //   currentLetter = 0;
-  // }
 }
 textMovedAll[currentLetter].style.opacity = 1;
 for (let i = 0; i < textMovedAll.length; i++) {
@@ -50,12 +38,25 @@ function write() {
       ? text[0]
       : text[currentLetter + 1];
   console.log(word);
-
-  // textMovedAll[0].innerHTML = word.slice(0, index);
-  // index++;
-  // if (index > word.length) {
-  //   index = 0;
-  // }
+  for (let i = 0; i < word.length; i++) {
+    animateOut(word, i);
+  }
+  for (let i = 0; i < newWorld.length; i++) {
+    newWorld[i].className = "letter behind";
+    newWorld[0].parentElement.style.opacity = 1;
+    animateIn(newWorld, i);
+  }
+  word = word == text.length - 1 ? 0 : word + 1;
+}
+function animateOut(word, i) {
+  setTimeout(() => {
+    word[i].className = "letter out";
+  }, i * 80);
+}
+function animateIn(newWd, i) {
+  setTimeout(() => {
+    newWd[i].className = "letter in";
+  }, 340 + i * 80);
 }
 write();
 // setInterval(write, 150);
