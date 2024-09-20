@@ -1,7 +1,4 @@
-const beatuiful = document.querySelector(".beautifull"),
-  incridible = document.querySelector(".incridible"),
-  fantastic = document.querySelector(".fantastic"),
-  amazing = document.querySelector(".amazing");
+const beatuiful = document.querySelector(".beautifull");
 const textMovedAll = document.querySelectorAll(".text_moved");
 
 let text = [];
@@ -10,7 +7,7 @@ let index = 0;
 
 function change(word) {
   let wordCont = word.innerHTML;
-  wordCont.innerHTML = "";
+  word.innerHTML = "";
   let letters = [];
   for (let i = 0; i < wordCont.length; i++) {
     let letter = document.createElement("letter");
@@ -48,16 +45,15 @@ function write() {
     animateIn(newWorld, i);
   }
   word = word == text.length - 1 ? 0 : word + 1;
-  console.log(word);
 }
 function animateOut(word, i) {
   setTimeout(() => {
     word[i].className = "letter out";
   }, i * 80);
 }
-function animateIn(newWd, i) {
+function animateIn(newWorld, i) {
   setTimeout(() => {
-    newWd[i].className = "letter in";
+    newWorld[i].className = "letter in";
   }, 340 + i * 80);
 }
 write();

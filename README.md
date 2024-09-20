@@ -75,3 +75,5 @@
 ###### Project-20 (sorting tabs)
 
 [Live](https://sortingtabs-tamana.netlify.app/)
+
+###### Project-21 (Text Rotation Animation)
