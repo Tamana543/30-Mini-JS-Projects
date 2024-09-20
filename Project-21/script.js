@@ -10,7 +10,6 @@ let index = 0;
 
 function change(word) {
   let wordCont = word.innerHTML;
-  console.log(wordCont);
   wordCont.innerHTML = "";
   let letters = [];
   for (let i = 0; i < wordCont.length; i++) {
@@ -24,6 +23,7 @@ function change(word) {
   text.push(letters);
 }
 textMovedAll[currentLetter].style.opacity = 1;
+
 for (let i = 0; i < textMovedAll.length; i++) {
   change(textMovedAll[i]);
 }
@@ -33,20 +33,22 @@ for (let i = 0; i < textMovedAll.length; i++) {
 
 function write() {
   let word = text[currentLetter];
+
   let newWorld =
     currentLetter === textMovedAll.length - 1
       ? text[0]
       : text[currentLetter + 1];
-  console.log(word);
-  for (let i = 0; i < word.length; i++) {
+
+  for (let i = 0; i < newWorld.length; i++) {
     animateOut(word, i);
   }
-  for (let i = 0; i < newWorld.length; i++) {
+  for (let i = 0; i < word.length; i++) {
     newWorld[i].className = "letter behind";
     newWorld[0].parentElement.style.opacity = 1;
     animateIn(newWorld, i);
   }
   word = word == text.length - 1 ? 0 : word + 1;
+  console.log(word);
 }
 function animateOut(word, i) {
   setTimeout(() => {
