@@ -4,9 +4,14 @@ const visitors = document.querySelector(".visitors");
 
 let counterEl = 0;
 function counterEn() {
-  followers.textContent = 0;
   counterEl = 0;
-  counterEl++;
-  followers.textContent = counterEl;
+  let main = setInterval(() => {
+    counterEl++;
+    return counterEl;
+  }, 10);
+  followers.textContent, subscribers.textContent, (visitors.textContent = 0);
+  followers.textContent = main;
+  subscribers.textContent = main;
+  visitors.textContent = main;
 }
 setInterval(counterEn, 10);
