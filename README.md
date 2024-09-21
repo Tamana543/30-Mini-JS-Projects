@@ -77,3 +77,7 @@
 [Live](https://sortingtabs-tamana.netlify.app/)
 
 ###### Project-21 (Text Rotation Animation)
+
+###### Project-22 (Incrementing Counter)
+
+[Live](https://socia-media-counter-tamana.netlify.app/)

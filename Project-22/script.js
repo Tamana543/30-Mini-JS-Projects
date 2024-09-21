@@ -20,6 +20,7 @@ function counterEn(element) {
     clearInterval(main);
   } else {
     element.textContent = target;
+    containerEl.classList.add("golden");
   }
   //   subscribers.textContent = main;
   //   visitors.textContent = main;
