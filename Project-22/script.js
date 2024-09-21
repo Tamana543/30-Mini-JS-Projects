@@ -1,17 +1,31 @@
 const followers = document.querySelector(".followers");
 const subscribers = document.querySelector(".subscroibers");
 const visitors = document.querySelector(".visitors");
-
+const containerEl = document.querySelector(".container");
 let counterEl = 0;
-function counterEn() {
+let target;
+let elements = [followers, subscribers, visitors];
+function counterEn(element) {
+  //   debugger;
+  target = +element.dataset.number;
+
   counterEl = 0;
   let main = setInterval(() => {
     counterEl++;
     return counterEl;
   }, 10);
-  followers.textContent, subscribers.textContent, (visitors.textContent = 0);
-  followers.textContent = main;
-  subscribers.textContent = main;
-  visitors.textContent = main;
+  if (main <= target) {
+    element.textContent = 0;
+    element.textContent = main;
+    clearInterval(main);
+  } else {
+    element.textContent = target;
+  }
+  //   subscribers.textContent = main;
+  //   visitors.textContent = main;
 }
-setInterval(counterEn, 10);
+elements.forEach((ele) => {
+  setInterval(function () {
+    counterEn(ele);
+  }, 10);
+});

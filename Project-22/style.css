@@ -24,6 +24,9 @@ img {
   /* border: 1px solid black; */
   box-shadow: -1px 8px 18px 2px #00000075;
 }
+.golden {
+  box-shadow: -1px 8px 18px 2px #f0c809;
+}
 .container div {
   padding: 2%;
   flex-direction: column;
