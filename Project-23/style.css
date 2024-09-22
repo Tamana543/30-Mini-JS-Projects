@@ -15,11 +15,22 @@ body {
 .container {
   flex-direction: column;
   width: 50%;
-  height: 50%;
+  height: 60%;
   background-color: black;
   border-radius: 10px;
 }
 .head_guide {
   color: springgreen;
   font-size: 2rem;
+}
+#text_box {
+  width: 60%;
+  height: 30%;
+  padding: 2%;
+  margin-top: 5%;
+}
+.options_box {
+  display: flex;
+  align-items: center;
+  height: auto;
 }
