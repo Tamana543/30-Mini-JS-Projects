@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  height: 100vh;
+  background-color: springgreen;
+}
+.container {
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+  background-color: black;
+  border-radius: 10px;
+}
+.head_guide {
+  color: springgreen;
+  font-size: 2rem;
+}
