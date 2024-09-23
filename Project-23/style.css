@@ -28,6 +28,11 @@ body {
   height: 30%;
   padding: 2%;
   margin-top: 5%;
+  font-size: 1rem;
+  text-wrap: wrap;
+}
+#text_box:focus {
+  outline: none;
 }
 .options_box {
   display: flex;
