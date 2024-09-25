@@ -81,3 +81,7 @@
 ###### Project-22 (Incrementing Counter)
 
 [Live](https://socia-media-counter-tamana.netlify.app/)
+
+###### Project-23 (Random Picker Visualizer)
+
+[Live](https://random-picker-tamana.netlify.app/)
