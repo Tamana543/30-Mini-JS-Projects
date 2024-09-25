@@ -37,6 +37,7 @@ body {
 }
 .options_box {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   align-items: center;
   height: auto;
@@ -44,8 +45,8 @@ body {
 .option {
   font-size: 0.9rem;
   background-color: springgreen;
-  margin: 5%;
-  margin-top: 10%;
+  margin: 2%;
+
   height: 30px;
   width: 80px;
   justify-content: space-around;
@@ -65,4 +66,12 @@ body {
 }
 .close:hover {
   opacity: 1;
+}
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+  #text_box {
+    width: 80%;
+  }
 }
