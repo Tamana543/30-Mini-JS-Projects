@@ -15,7 +15,7 @@ body {
 .container {
   flex-direction: column;
   width: 50%;
-  height: 60%;
+  height: auto;
   background-color: black;
   border-radius: 10px;
 }
@@ -30,18 +30,21 @@ body {
   margin-top: 5%;
   font-size: 1rem;
   text-wrap: wrap;
+  margin-bottom: 5%;
 }
 #text_box:focus {
   outline: none;
 }
 .options_box {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   height: auto;
 }
 .option {
   font-size: 0.9rem;
   background-color: springgreen;
+  margin: 5%;
   margin-top: 10%;
   height: 30px;
   width: 80px;
