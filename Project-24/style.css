@@ -17,12 +17,11 @@ body {
   width: 60%;
   height: 15%;
   padding: 3%;
-  position: relative;
 }
 .links {
   background-color: #fff;
   padding: 2%;
-
+  position: relative;
   border-radius: 19%;
   width: 100%;
   justify-content: space-around;
@@ -43,12 +42,28 @@ button {
   height: 5rem;
   border-radius: 50%;
   font-size: 2rem;
-
+  cursor: pointer;
   border: none;
 }
 .open_btn {
-  background-color: green;
+  display: block;
 }
 .close_btn {
+  /* display: none; */
+  background-color: rgb(21, 194, 21);
+  position: relative;
+}
+.hide {
   display: none;
+}
+.close_btn span {
+  position: absolute;
+  top: 20px;
+  /* transform: rotate(30deg); */
+}
+.line {
+  transform: rotate(39deg);
+}
+.line_2 {
+  transform: rotate(-50deg);
 }
