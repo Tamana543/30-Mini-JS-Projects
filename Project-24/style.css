@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  height: 100vh;
+  font-size: 10px;
+  background: #000;
+}
+.container {
+  width: 60%;
+  height: 15%;
+  padding: 3%;
+  position: relative;
+}
+.links {
+  background-color: #fff;
+  padding: 2%;
+
+  border-radius: 19%;
+  width: 100%;
+  justify-content: space-around;
+}
+.link {
+  width: 5rem;
+  height: 4rem;
+}
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+button {
+  position: absolute;
+  right: -8%;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  font-size: 2rem;
+
+  border: none;
+}
+.open_btn {
+  background-color: green;
+}
+.close_btn {
+  display: none;
+}
