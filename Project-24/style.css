@@ -41,25 +41,27 @@ img {
 }
 button {
   position: absolute;
-  right: -8%;
+  right: -4%;
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
   font-size: 2rem;
   cursor: pointer;
   border: none;
+  background-color: rgb(21, 194, 21);
+  color: #fff;
+}
+.spin {
+  animation: spin 1s linear;
 }
 /* button:hover {
-  animation: spin 1s linear;
 } */
 .open_btn {
   display: block;
 }
 
 .close_btn {
-  /* display: none; */
-  background-color: rgb(21, 194, 21);
-  position: relative;
+  font-size: 3rem;
 }
 .hide {
   display: none;
@@ -67,14 +69,8 @@ button {
 .close_btn span {
   position: absolute;
   top: 20px;
-  /* transform: rotate(30deg); */
 }
-.line {
-  transform: rotate(39deg);
-}
-.line_2 {
-  transform: rotate(-50deg);
-}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
