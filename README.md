@@ -85,3 +85,7 @@
 ###### Project-23 (Random Picker Visualizer)
 
 [Live](https://random-picker-tamana.netlify.app/)
+
+###### Project-24 (Social Media Animation)
+
+[Live](https://sociamedia-animation.netlify.app/)
