@@ -19,17 +19,21 @@ body {
   padding: 3%;
   overflow: hidden;
   scrollbar-width: 0;
+  position: relative;
+  border-radius: 10%;
+  /* border: 1px solid #fff; */
 }
 .links {
-  background-color: #fff;
   padding: 2%;
-  position: relative;
+  position: absolute;
+  inset: 0;
 
   border-radius: 19%;
-  width: 100%;
+  width: 90%;
   justify-content: space-around;
-  transition: all 2s ease-in-out;
+  transition: all 1s ease-in-out;
 }
+
 .link {
   width: 5rem;
   height: 4rem;
@@ -41,16 +45,17 @@ img {
 }
 button {
   position: absolute;
-  right: -4%;
+  right: 0%;
   width: 5rem;
   height: 5rem;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   font-size: 2rem;
   cursor: pointer;
   border: none;
-  background-color: rgb(21, 194, 21);
+  background-color: rgb(46 184 0);
   color: #fff;
 }
+
 .spin {
   animation: spin 1s linear;
 }
@@ -62,15 +67,16 @@ button {
 
 .close_btn {
   font-size: 3rem;
-  width: 100%;
-  height: 100%;
+
+  background-color: rgb(21, 194, 21);
 }
 .hide {
   display: none;
 }
 .close_btn span {
   position: absolute;
-  top: 20px;
+  top: 10px;
+  right: 35px;
 }
 
 @keyframes spin {

@@ -1,30 +1,18 @@
 const openBtn = document.querySelector(".open_btn");
-// const closeBtn = document.querySelector(".close_btn");
+const closeBtn = document.querySelector(".close_btn");
 const links = document.querySelector(".links");
 
 openBtn.addEventListener("click", function () {
-  //   this.classList.add("spin");
-  //   this.classList.toggle("hide");
+  closeBtn.classList.toggle("hide");
+  this.classList.toggle("hide");
 
-  this.classList.toggle("spin");
-  this.textContent = "";
-  const span = document.createElement("span");
-  span.textContent = "X";
-  span.classList.add("close_btn");
-  this.appendChild(span);
-  //   this.textContent = `<span class="line">|</span>
-  //           <span class="line_2">|</span>`;
-  //   this.classList.toggle("hide");
+  document.querySelector(".main-logo").classList.toggle("spin");
 
-  //   this.style.animation = "spin 1s linear";
-  document.querySelector(".close_btn").addEventListener("click", function () {
-    this.classList.add("spin");
-    this.textContent = "";
-    this.textContent = `<img src="main _logo.png" alt="main-logo" />`;
-    this.classList.add("open_btn");
-  });
+  document.querySelector(".links").style.left = "62rem";
 });
-// closeBtn.addEventListener("click", function () {
-//   this.classList.toggle("hide");
-//   this.classList.toggle("spin");
-// });
+closeBtn.addEventListener("click", function () {
+  openBtn.classList.toggle("hide");
+  this.classList.toggle("hide");
+  this.querySelector(".close").classList.toggle("spin");
+  document.querySelector(".links").style.left = "0rem";
+});
