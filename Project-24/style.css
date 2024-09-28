@@ -14,17 +14,21 @@ body {
   background: #000;
 }
 .container {
-  width: 60%;
+  width: 62%;
   height: 15%;
   padding: 3%;
+  overflow: hidden;
+  scrollbar-width: 0;
 }
 .links {
   background-color: #fff;
   padding: 2%;
   position: relative;
+
   border-radius: 19%;
   width: 100%;
   justify-content: space-around;
+  transition: all 2s ease-in-out;
 }
 .link {
   width: 5rem;
@@ -45,9 +49,13 @@ button {
   cursor: pointer;
   border: none;
 }
+/* button:hover {
+  animation: spin 1s linear;
+} */
 .open_btn {
   display: block;
 }
+
 .close_btn {
   /* display: none; */
   background-color: rgb(21, 194, 21);
@@ -66,4 +74,39 @@ button {
 }
 .line_2 {
   transform: rotate(-50deg);
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(40deg);
+  }
+  20% {
+    transform: rotate(80deg);
+  }
+  30% {
+    transform: rotate(120deg);
+  }
+  40% {
+    transform: rotate(160deg);
+  }
+  50% {
+    transform: rotate(200deg);
+  }
+  60% {
+    transform: rotate(260deg);
+  }
+  70% {
+    transform: rotate(320deg);
+  }
+  80% {
+    transform: rotate(380deg);
+  }
+  90% {
+    transform: rotate(400deg);
+  }
+  100% {
+    transform: rotate(460deg);
+  }
 }
