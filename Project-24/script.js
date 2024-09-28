@@ -17,6 +17,12 @@ openBtn.addEventListener("click", function () {
   //   this.classList.toggle("hide");
 
   //   this.style.animation = "spin 1s linear";
+  document.querySelector(".close_btn").addEventListener("click", function () {
+    this.classList.add("spin");
+    this.textContent = "";
+    this.textContent = `<img src="main _logo.png" alt="main-logo" />`;
+    this.classList.add("open_btn");
+  });
 });
 // closeBtn.addEventListener("click", function () {
 //   this.classList.toggle("hide");
