@@ -114,3 +114,20 @@ button {
     transform: rotate(460deg);
   }
 }
+@media (max-width: 500px) {
+  .link {
+    width: 3rem;
+    height: 3rem;
+  }
+  .links {
+    justify-content: center;
+    gap: 2%;
+  }
+  .container {
+    width: 90%;
+  }
+  button {
+    width: 4rem;
+    height: 4rem;
+  }
+}
