@@ -10,9 +10,16 @@
     <div class="flex container">
       <div class="main">
         <input type="checkbox" name="light" id="light" />
-        <label for="light"></label>
+        <label for="light" class="label"></label>
+        <span class="moon_inside"></span>
       </div>
     </div>
-    <script></script>
+    <script>
+      const label = document.querySelector(".label");
+      const containerEl = document.querySelector(".container");
+      label.addEventListener("click", () =>
+        containerEl.classList.toggle("dark")
+      );
+    </script>
   </body>
 </html>
