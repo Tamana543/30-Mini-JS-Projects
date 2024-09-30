@@ -93,3 +93,7 @@
 ###### Project-25 (Infinite Scroll)
 
 [Live](https://infinite-scroll-tamana.netlify.app/)
+
+###### Project-26 (Theme Rogle)
+
+[Live](https://theme-toggler-tamana.netlify.app/)
