@@ -1,5 +1,24 @@
 const containerEl = document.querySelector(".container");
+const heading = document.querySelelctor(".box_head");
+const dateEl = document.querySelelctor(".date");
+const boxPara = document.querySelector(".box_body");
 
+// Arrays
+const titles = [
+  "Lorem ipsum dolor sit amet",
+  "Consectetur adipisicing elit.",
+  "Expedita, ipsam consequatur amet anim iure quo nam earum",
+  "Ipsam consequatur amet an re quo nam earum?",
+];
+
+const date = ["2005/2/14", "2004/7/19", "2001/1/10", "1995/2/14", "2035/4/18"];
+
+const body = [
+  "consectetur adipisicing elit. Expedita, ipsam consequatur amet animiiure quo nam earum? Quos",
+  "Magnam culpa magniofficiis tenetur suscipit, labore accusantium quaerat.",
+  "consectetur adipisicing elit. Expedita, ipsam consequatur amet animiiure quo nam earum? Quos molestias corrupti ea. Magnam culpa magniofficiis tenetur suscipit, labore accusantium quaerat.",
+  "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima tempore voluptas nostrum dicta soluta qui reiciendis dolorum. Facere accusamus minus non officia, ratione modi rerum atque exercitationem error enim alias.",
+];
 window.addEventListener("scroll", function () {
   const html = `<div class="box">
         <h3 class="box_head">Lorem ipsum dolor sit amet,</h3>
