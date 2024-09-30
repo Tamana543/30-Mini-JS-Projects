@@ -89,3 +89,7 @@
 ###### Project-24 (Social Media Animation)
 
 [Live](https://sociamedia-animation.netlify.app/)
+
+###### Project-25 (Infinite Scroll)
+
+[Live](https://infinite-scroll-tamana.netlify.app/)

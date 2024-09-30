@@ -47,6 +47,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-for (let index = 0; index < 3; index++) {
+for (let index = 0; index < 6; index++) {
   mainEn();
 }
