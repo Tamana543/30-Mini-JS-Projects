@@ -25,6 +25,11 @@ body {
   margin-bottom: 4%;
   font-size: 2rem;
 }
+.boxes {
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+}
 .box {
   flex-direction: column;
   text-align: left;
@@ -32,6 +37,7 @@ body {
   padding: 5%;
   height: auto;
   background-color: rgb(30, 73, 19);
+  margin: 5%;
 }
 .box_head {
   font-size: 1.2rem;
@@ -44,6 +50,20 @@ body {
 }
 .box_body {
   font-size: 1rem;
+}
+.loading {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgb(150, 25, 87);
+  border-radius: 50%;
+  margin: 10px auto 7px auto;
+  animation: rot 1s linear infinite;
+  display: none;
+}
+@keyframes rot {
+  100% {
+    transform: rotate3d(1, 1, 1, 360deg);
+  }
 }
 @media (max-width: 500px) {
   .container {

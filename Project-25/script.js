@@ -1,8 +1,4 @@
-const containerEl = document.querySelector(".container");
-const heading = document.querySelector(".box_head");
-const dateEl = document.querySelector(".date");
-
-const boxPara = document.querySelector(".box_body");
+const containerEl = document.querySelector(".boxes");
 
 // Arrays
 const titles = [
@@ -20,20 +16,26 @@ const body = [
   "consectetur adipisicing elit. Expedita, ipsam consequatur amet animiiure quo nam earum? Quos molestias corrupti ea. Magnam culpa magniofficiis tenetur suscipit, labore accusantium quaerat.",
   "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima tempore voluptas nostrum dicta soluta qui reiciendis dolorum. Facere accusamus minus non officia, ratione modi rerum atque exercitationem error enim alias.",
 ];
-function mainEn(data) {
+function randumEn(data) {
   const main = data[Math.floor(Math.random() * data.length)];
   return main;
 }
-// console.log(mainEn(body));
-// window.addEventListener("scroll", function () {
-//   const html = `<div class="box">
-//         <h3 class="box_head">Lorem ipsum dolor sit amet,</h3>
-//         <p class="date">1995/2/14</p>
-//         <p class="box_body">
-//           consectetur adipisicing elit. Expedita, ipsam consequatur amet animi
-//           iure quo nam earum? Quos molestias corrupti ea. Magnam culpa magni
-//           officiis tenetur suscipit, labore accusantium quaerat.
-//         </p>
-//       </div>`;
-//   containerEl.insertAdjacentHTML("afterbegin", html);
-// });
+
+function mainEn() {
+  const html = `
+  <div class="box">
+        <h3 class="box_head">${randumEn(titles)}</h3>
+        <p class="date">${randumEn(date)}</p>
+        <p class="box_body">
+          ${randumEn(body)}
+        </p>
+      </div>`;
+  containerEl.insertAdjacentHTML("afterbegin", html);
+}
+for (let index = 0; index < 4; index++) {
+  mainEn();
+}
+
+window.addEventListener("scroll", function () {
+  console.log(this);
+});
