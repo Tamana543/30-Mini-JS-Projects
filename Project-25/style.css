@@ -20,6 +20,7 @@ body {
   flex-direction: column;
   width: 60%;
   height: auto;
+  scroll-behavior: smooth;
 }
 .head {
   margin-bottom: 4%;

@@ -1,5 +1,5 @@
 const containerEl = document.querySelector(".boxes");
-
+const loading = document.querySelector(".loading");
 // Arrays
 const titles = [
   "Lorem ipsum dolor sit amet",
@@ -32,10 +32,21 @@ function mainEn() {
       </div>`;
   containerEl.insertAdjacentHTML("afterbegin", html);
 }
-for (let index = 0; index < 4; index++) {
-  mainEn();
-}
 
 window.addEventListener("scroll", function () {
-  console.log(this);
+  // console.log(this);
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+    loading.style.display = "block";
+    setTimeout(() => {
+      loading.style.display = "none";
+
+      setTimeout(() => {
+        mainEn();
+      }, 500);
+    }, 2000);
+  }
 });
+
+for (let index = 0; index < 3; index++) {
+  mainEn();
+}
