@@ -39,7 +39,7 @@ img {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #fff;
+  background-color: rgb(49, 49, 56);
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -53,10 +53,11 @@ img {
 }
 .display_img img {
   position: absolute;
-  height: 70%;
+  height: 100%;
+  width: 100%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0.4);
+  transform: translate(-50%, -50%) scale(0.5);
 }
 .sub_img:hover {
   cursor: pointer;
@@ -70,5 +71,10 @@ img {
   }
   .sub_img {
     width: 24%;
+  }
+
+  .display_img img {
+    height: 60%;
+    width: 190%;
   }
 }

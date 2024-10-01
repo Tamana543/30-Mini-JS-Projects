@@ -97,3 +97,7 @@
 ###### Project-26 (Theme Rogle)
 
 [Live](https://theme-toggler-tamana.netlify.app/)
+
+###### Project-27 ( Fluid Image Pop Up)
+
+[Live](https://fluid-img-pop-up.netlify.app/)
