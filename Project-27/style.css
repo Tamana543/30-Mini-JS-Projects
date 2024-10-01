@@ -34,7 +34,7 @@ img {
   transition: all 1s ease;
   /* position: absolute; */
 }
-.sub_img:hover {
+/* .sub_img:hover {
   transform: scale3d(2, 2, 2);
 
   z-index: 1;
@@ -46,7 +46,7 @@ img {
 }
 .spe_2:hover {
   margin-right: 100px;
-}
+} */
 @media (max-width: 500px) {
   .container {
     width: 96%;
