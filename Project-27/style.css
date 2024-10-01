@@ -20,6 +20,7 @@ body {
   height: 60%;
   background-color: rgb(49, 49, 56);
   padding: 1%;
+  position: relative;
 }
 img {
   width: 310px;
@@ -30,4 +31,28 @@ img {
   width: 30%;
   height: 40%;
   margin: 1%;
+  transition: all 1s ease;
+  /* position: absolute; */
+}
+.sub_img:hover {
+  transform: scale3d(2, 2, 2);
+
+  z-index: 1;
+  margin: -150px;
+  backdrop-filter: 1;
+}
+.spe_1:hover {
+  margin-left: 100px;
+}
+.spe_2:hover {
+  margin-right: 100px;
+}
+@media (max-width: 500px) {
+  .container {
+    width: 96%;
+    height: auto;
+  }
+  .sub_img {
+    width: 24%;
+  }
 }
