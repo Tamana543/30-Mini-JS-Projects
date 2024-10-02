@@ -16,9 +16,42 @@ body {
 }
 a:link {
   display: block;
-  border: 1px solid #fff;
+  width: 100%;
+  height: 30px;
+  border: 1px solid #c7c7c7;
+  text-decoration: none;
+  background-color: #fff;
+  color: rgba(26, 25, 25, 0.589);
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0 2%;
+}
+a:link:hover {
+  color: rgba(26, 25, 25);
 }
 .container {
   width: 60%;
   height: auto;
+}
+.item {
+  width: 100%;
+  height: auto;
+}
+.head,
+.text_body {
+  width: 80%;
+}
+.head {
+  padding: 0 2%;
+  background-color: rgb(92, 92, 240);
+  flex-direction: row !important;
+  justify-content: space-between;
+}
+.btn {
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  transform: rotate(30deg);
+  color: #fff;
+  cursor: pointer;
 }
