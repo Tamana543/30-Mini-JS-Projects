@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body {
+  height: 100vh;
+  background-color: rgb(26, 25, 25);
+  color: #fff;
+}
+a:link {
+  display: block;
+  border: 1px solid #fff;
+}
+.container {
+  width: 60%;
+  height: auto;
+}
