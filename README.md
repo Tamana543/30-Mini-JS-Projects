@@ -94,7 +94,7 @@
 
 [Live](https://infinite-scroll-tamana.netlify.app/)
 
-###### Project-26 (Theme Rogle)
+###### Project-26 (Theme Togle)
 
 [Live](https://theme-toggler-tamana.netlify.app/)
 
