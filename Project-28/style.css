@@ -13,6 +13,8 @@ body {
   height: 100vh;
   background-color: rgb(26, 25, 25);
   color: #fff;
+  justify-content: flex-start !important;
+  margin-top: 2%;
 }
 a:link {
   display: block;
@@ -43,6 +45,8 @@ a:link:hover {
 }
 .text_body {
   display: none;
+  min-height: 0%;
+  transition: all 5s ease-in-out;
 }
 .head {
   padding: 0 2%;
@@ -61,5 +65,5 @@ a:link:hover {
 }
 .visible {
   display: block;
-  transition: all 0.6s ease-in-out;
+  min-height: 73%;
 }
