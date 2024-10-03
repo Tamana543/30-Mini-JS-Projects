@@ -67,3 +67,23 @@ function createCards() {
 function showCard(card) {
   card.classList.add("show");
 }
+function initGame() {
+  createCards();
+  const card = document.querySelectorAll(".card");
+  for (let i = 0; i < card.length; i++) {
+    card[i].addEventListener(
+      "click",
+      function (event) {
+        if (card[i] !== event.target) return;
+        if (event.target.classList.contains("show")) return;
+        if (isFirstClick) {
+          timerID = setInterval(timer, 1000);
+          isFirstClick = false;
+        }
+        showCard(event.target);
+        setTimeout(addCard, 550, sguffleCards[i], event.target, cardText, i);
+      },
+      false
+    );
+  }
+}
