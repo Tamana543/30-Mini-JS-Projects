@@ -2,6 +2,9 @@ const modal = document.querySelector(".modal");
 const closeModalBtn = document.querySelector(".close_btn");
 const board = document.querySelector(".board");
 let moves = document.querySelector(".moves");
+let restart = document.querySelector(".restart");
+let timerEl = document.querySelector(".timer");
+const newGameBtn = document.querySelector(".new_game");
 let cardText = [];
 let moveCounter = 0;
 let match = 0;
@@ -132,18 +135,58 @@ function cardsDontMatch(card1, card2) {
     card2.classList.toggle("show");
   }, 300);
 }
-
+let min = 0;
+let second = 0;
 function winingEn() {
   clearInterval(timerID);
   modal.classList.toggle("show_modal");
   const stats = document.querySelector(".stats");
-  if (s % 60 < 10) {
-    stats.textContent = `You won with ${moveCounter} moves with time:  ${m}:0 ${
-      s % 60
+  if (second % 60 < 10) {
+    stats.textContent = `You won with ${moveCounter} moves with time:  ${min}:0 ${
+      second % 60
     }`;
   } else {
-    stats.textContent = `You won with ${moveCounter} moves with time:  ${m}:0 ${
-      s % 60
+    stats.textContent = `You won with ${moveCounter} moves with time:  ${min}:0 ${
+      second % 60
     }`;
   }
 }
+function updateMoveCounter() {
+  moveCounter++;
+  moves.textContent = `Moves : ${moveCounter};
+  `;
+}
+function timer() {
+  second++;
+  min = Math.floor(second / 60);
+
+  if (second % 60 < 10) {
+    timerEl.textContent = `${min} : 0${second % 60}`;
+  } else {
+    timerEl.textContent = `${min} : ${second % 60}`;
+  }
+}
+restart.addEventListener("click", restartGame, false);
+function restartGame() {
+  clearInterval(timerID);
+  moveCounter = 0;
+  second = 0;
+  min = 0;
+  isFirstClick = true;
+  isRestart = true;
+  let elements = board.getElementsByClassName("card");
+
+  while (elements[0]) {
+    elements[0].parentNode.removeChild([elements[0]]);
+  }
+  shuffleCardEn = shuffle(cards);
+  timerEl.textContent = `0:00`;
+  moves.textContent = `Moves: ${moveCounter}`;
+  initGame();
+}
+
+newGameBtn.addEventListener("click", () => {
+  modal.classList.toggle("show_modal");
+  restartGame();
+});
+initGame();
