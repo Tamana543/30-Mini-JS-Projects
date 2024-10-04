@@ -47,9 +47,9 @@ function shuffle(ele) {
   }
   return ele;
 }
-let sguffleCards = shuffle(cards);
+let shuffleCardEn = shuffle(cards);
 function createCards() {
-  for (let card of sguffleCards) {
+  for (let card of shuffleCardEn) {
     const li = document.createElement("li");
     li.classList.toggle("card");
     const i = document.createElement("i");
@@ -81,9 +81,37 @@ function initGame() {
           isFirstClick = false;
         }
         showCard(event.target);
-        setTimeout(addCard, 550, sguffleCards[i], event.target, cardText, i);
+        setTimeout(addCard, 550, shuffleCardEn[i], event.target, cardText, i);
       },
       false
     );
   }
 }
+function addCard(card, cardHTML, testList, pos) {
+  if (isRestart) {
+    testList.length = 0;
+    isRestart = false;
+  }
+  testList.push(card), testList.push(cardHTML);
+  testList.push(pos);
+  if (testList.length === 6) {
+    updateMoveCounter();
+    testCards(
+      testList[0],
+      testList[1],
+      testList[2],
+      testList[3],
+      testList[4],
+      testList[5]
+    );
+    testList.length = 0;
+  }
+}
+function testCards(card1, html1, x1, card2, html2, x2) {
+  if (card1 === card2 && x1 != x2) {
+    cardsMatch(html1, html2);
+  } else {
+    cardsDontMatch(html1, html2);
+  }
+}
+function cardsMatch(card1, card2) {}
