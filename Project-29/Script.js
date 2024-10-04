@@ -51,26 +51,28 @@ function shuffle(ele) {
   return ele;
 }
 let shuffleCardEn = shuffle(cards);
+let img;
 function createCards() {
   for (let card of shuffleCardEn) {
     // <img src="" alt="" >
-    const img = document.createElement("img");
-    img.classList.toggle("card");
+    const li = document.createElement("li");
+    li.classList.toggle("card");
+    img = document.createElement("img");
+    // img.classList.toggle("card");
+    const i = document.createElement("i");
+    i.classList.toggle("fa");
     // const imgSrc = img.src;
-    // i.classList.toggle("fa");
-    if (card === "happyFace.jfif") {
-      // i.classList.toggle("fa-paper-plane-o");
-      img.src = `happyFace.jfif`;
-    } else {
-      img.src = `${card}`;
-    }
+
+    img.src = `${card}`;
+
     const board = document.querySelector(".board");
-    // li.appendChild(i);
-    board.appendChild(img);
+    li.appendChild(img);
+    board.appendChild(li);
   }
 }
 function showCard(card) {
   card.classList.add("show");
+  // img.style.width = "80%";
 }
 function initGame() {
   createCards();
@@ -83,9 +85,11 @@ function initGame() {
         if (event.target.classList.contains("show")) return;
         if (isFirstClick) {
           timerID = setInterval(timer, 1000);
+
           isFirstClick = false;
         }
         showCard(event.target);
+
         setTimeout(addCard, 550, shuffleCardEn[i], event.target, cardText, i);
       },
       false
@@ -176,10 +180,11 @@ function restartGame() {
   min = 0;
   isFirstClick = true;
   isRestart = true;
+  const board = document.querySelector(".board");
   let elements = board.getElementsByClassName("card");
 
   while (elements[0]) {
-    elements[0].parentNode.removeChild([elements[0]]);
+    elements[0].removeChild([elements[0]]);
   }
   shuffleCardEn = shuffle(cards);
   timerEl.textContent = `0:00`;
