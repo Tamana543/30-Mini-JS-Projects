@@ -114,4 +114,36 @@ function testCards(card1, html1, x1, card2, html2, x2) {
     cardsDontMatch(html1, html2);
   }
 }
-function cardsMatch(card1, card2) {}
+function cardsMatch(card1, card2) {
+  card1.classList.add("match");
+  card2.classList.add("match");
+  match++;
+  if (match === 8) {
+    winingEn();
+  }
+}
+function cardsDontMatch(card1, card2) {
+  card1.classList.add("no-match");
+  card2.classList.add("no-match");
+  setTimeout(() => {
+    card1.classList.toggle("no-match");
+    card2.classList.toggle("no-match");
+    card2.classList.toggle("show");
+    card2.classList.toggle("show");
+  }, 300);
+}
+
+function winingEn() {
+  clearInterval(timerID);
+  modal.classList.toggle("show_modal");
+  const stats = document.querySelector(".stats");
+  if (s % 60 < 10) {
+    stats.textContent = `You won with ${moveCounter} moves with time:  ${m}:0 ${
+      s % 60
+    }`;
+  } else {
+    stats.textContent = `You won with ${moveCounter} moves with time:  ${m}:0 ${
+      s % 60
+    }`;
+  }
+}
