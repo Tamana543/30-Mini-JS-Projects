@@ -153,7 +153,7 @@ function winingEn() {
 }
 function updateMoveCounter() {
   moveCounter++;
-  moves.textContent = `Moves : ${moveCounter};
+  moves.textContent = `${moveCounter};
   `;
 }
 function timer() {
