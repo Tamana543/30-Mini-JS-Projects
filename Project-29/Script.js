@@ -12,22 +12,22 @@ let isFirstClick = true;
 let timerID;
 let isRestart = false;
 let cards = [
-  "diamond",
-  "diamond",
-  "plane",
-  "plane",
-  "anchor",
-  "anchor",
-  "bolt",
-  "bolt",
-  "leaf",
-  "leaf",
-  "bicycle",
-  "bicycle",
-  "cube",
-  "cube",
-  "bomb",
-  "bomb",
+  "coolFace.jfif",
+  "coolFace.jfif",
+  "happyFace.jfif",
+  "happyFace.jfif",
+  "hearthFace.jfif",
+  "hearthFace.jfif",
+  "hugging.jfif",
+  "hugging.jfif",
+  "kissFace.jfif",
+  "kissFace.jfif",
+  "monyFace.jfif",
+  "monyFace.jfif",
+  "sadFace.jfif",
+  "sadFace.jfif",
+  "shuckedFace.jfif",
+  "shuckedFace.jfif",
 ];
 
 closeModalBtn.addEventListener("click", () => {
@@ -53,18 +53,20 @@ function shuffle(ele) {
 let shuffleCardEn = shuffle(cards);
 function createCards() {
   for (let card of shuffleCardEn) {
-    const li = document.createElement("li");
-    li.classList.toggle("card");
-    const i = document.createElement("i");
-    i.classList.toggle("fa");
-    if (card === "plane") {
-      i.classList.toggle("fa-paper-plane-o");
+    // <img src="" alt="" >
+    const img = document.createElement("img");
+    img.classList.toggle("card");
+    // const imgSrc = img.src;
+    // i.classList.toggle("fa");
+    if (card === "happyFace.jfif") {
+      // i.classList.toggle("fa-paper-plane-o");
+      img.src = `happyFace.jfif`;
     } else {
-      i.classList.toggle(`fa-${card}`);
+      img.src = `${card}`;
     }
     const board = document.querySelector(".board");
-    li.appendChild(i);
-    board.appendChild(li);
+    // li.appendChild(i);
+    board.appendChild(img);
   }
 }
 function showCard(card) {
