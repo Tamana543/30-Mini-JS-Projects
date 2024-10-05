@@ -58,19 +58,16 @@ function createCards() {
     const li = document.createElement("li");
     li.classList.toggle("card");
     img = document.createElement("img");
-    img.classList.toggle("hide");
-    const i = document.createElement("img");
-    if (isFirstClick) {
-      i.style.opacity = "1";
-    } else {
-      i.style.opacity = "0";
-      img.style.opacity = "1";
-      img.src = `${card}`;
-    }
+
+    const i = document.createElement("i");
+    i.classList.toggle("fa");
     // const imgSrc = img.src;
+
+    img.src = `${card}`;
 
     const board = document.querySelector(".board");
     li.appendChild(img);
+    li.appendChild(i);
     board.appendChild(li);
   }
 }
@@ -189,7 +186,7 @@ function restartGame() {
   let elements = board.getElementsByClassName("card");
 
   while (elements[0]) {
-    elements[0].removeChild([elements[0]]);
+    elements.removeChild([elements]);
   }
   shuffleCardEn = shuffle(cards);
   timerEl.textContent = `0:00`;
