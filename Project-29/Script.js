@@ -58,12 +58,16 @@ function createCards() {
     const li = document.createElement("li");
     li.classList.toggle("card");
     img = document.createElement("img");
-    // img.classList.toggle("card");
-    const i = document.createElement("i");
-    i.classList.toggle("fa");
+    img.classList.toggle("hide");
+    const i = document.createElement("img");
+    if (isFirstClick) {
+      i.style.opacity = "1";
+    } else {
+      i.style.opacity = "0";
+      img.style.opacity = "1";
+      img.src = `${card}`;
+    }
     // const imgSrc = img.src;
-
-    img.src = `${card}`;
 
     const board = document.querySelector(".board");
     li.appendChild(img);
@@ -75,6 +79,7 @@ function showCard(card) {
   // img.style.width = "80%";
 }
 function initGame() {
+  // debugger;
   createCards();
   const card = document.querySelectorAll(".card");
   for (let i = 0; i < card.length; i++) {
