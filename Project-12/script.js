@@ -7,6 +7,48 @@ const headEl = document.querySelectorAll(".head"),
   openBtn = document.querySelectorAll(".open");
 const parent = document.querySelectorAll(".lists");
 
+submitBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  if (DOMTitle.value !== "" && DOMDescription.value !== "") {
+    // Creating Element
+    const ul = document.createElement("ul");
+    ul.classList.add("lists");
+    const liFirst = document.createElement("li");
+    liFirst.classList.add("head");
+    liFirst.dataset = "new_file";
+
+    const pFirst = document.createElement("p");
+    pFirst.textContent = `What is ${DOMTitle.value}?`;
+
+    const pSec = document.createElement("p");
+    pSec.classList.add("open");
+    const one = document.createElement("span");
+    one.classList.add("one");
+    one.textContent = "|";
+    const two = document.createElement("span");
+    two.classList.add("two");
+    two.textContent = "|";
+    const liSec = document.createElement("li");
+    liSec.classList.add("description");
+    liSec.dataset = "new_file_description";
+    liSec.textContent = ` ${DOMDescription.value}.`;
+
+    // Inserting The Ele on the page
+
+    pSec.appendChild(one);
+    pSec.appendChild(two);
+    liFirst.appendChild(pSec);
+    liFirst.appendChild(pFirst);
+    ul.appendChild(liFirst);
+    ul.appendChild(liSec);
+
+    console.log(ul);
+    mainEl.appendChild(ul);
+
+    DOMTitle.value = "";
+    DOMDescription.value = "";
+  } else return;
+});
 headEl.forEach((head) => {
   head.addEventListener("click", () => {
     const item = head.parentElement;
@@ -27,33 +69,4 @@ headEl.forEach((head) => {
       content.style.minHeight = "0px";
     }
   });
-});
-submitBtn.addEventListener("click", (event) => {
-  event.preventDefault();
-  if (DOMTitle.value !== "" && DOMDescription.value !== "") {
-    const html = ` 
-  <ul class="lists">
-  <li class="head" data-head="new_file">
-    <p>What is ${DOMTitle.value}?</p>
-    <p class="open">
-      <span class="one">|</span> <span class="two">|</span>
-    </p>
-  </li>
-  <li class="description" data-head="new_file_description">
-     ${DOMDescription.value}.
-  </li>
-</ul>`;
-    mainEl.insertAdjacentHTML("beforeend", html);
-    console.log(headEl);
-    const head = Array(...headEl);
-    /**
-     * item.appendChild(head);
-     * item.appendChild(des)
-     */
-
-    console.log(head);
-
-    DOMTitle.value = "";
-    DOMDescription.value = "";
-  } else return;
 });
