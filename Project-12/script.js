@@ -42,15 +42,18 @@ submitBtn.addEventListener("click", (event) => {
     ul.appendChild(liFirst);
     ul.appendChild(liSec);
 
-    console.log(ul);
+    // console.log(ul);
     mainEl.appendChild(ul);
+    // mainEl.insertBefore(mainEl, ul);
 
     DOMTitle.value = "";
     DOMDescription.value = "";
+    console.log(mainEl);
   } else return;
 });
 headEl.forEach((head) => {
   head.addEventListener("click", () => {
+    console.log(this);
     const item = head.parentElement;
     const content = item.querySelector(".description");
     descriptionEl.forEach((ele) => {
