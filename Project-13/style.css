@@ -61,10 +61,10 @@ input:focus {
   width: 3%;
   height: 4%;
   cursor: pointer;
+  opacity: 0.5;
 }
 .icon:hover {
-  width: 4%;
-  height: 5%;
+  opacity: 1;
 }
 .check_points {
   width: 80%;
