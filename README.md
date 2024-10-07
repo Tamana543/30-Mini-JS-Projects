@@ -48,6 +48,8 @@
 
 ###### Project-13 (Generate Password)
 
+[Live](https://password-generator-tamana.netlify.app/)
+
 ###### Project-14 (Skrollbar Generator)
 
 [Live](https://scroll-bar-tamana.netlify.app/)
