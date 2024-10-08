@@ -49,9 +49,16 @@ body {
 .head {
   color: #fff;
   font-family: sans-serif;
+  text-align: center;
+  position: relative;
 }
 .text_moved {
-  font-family: cursive;
+  position: absolute;
+  top: -12%;
+  right: -77%;
+
+  width: 10rem;
+  font-size: 1.5rem;
   opacity: 0;
 }
 .beautifull {
@@ -99,5 +106,8 @@ body {
     justify-content: space-between;
     align-items: center;
     text-align: center;
+  }
+  .text_moved {
+    right: -147%;
   }
 }
