@@ -52,6 +52,7 @@ body {
 }
 .text_moved {
   font-family: cursive;
+  opacity: 0;
 }
 .beautifull {
   color: red;

@@ -7,13 +7,14 @@ let index = 0;
 
 function change(word) {
   let wordCont = word.innerHTML;
-  word.innerHTML = "";
+  wordCont = "";
   let letters = [];
   for (let i = 0; i < wordCont.length; i++) {
     let letter = document.createElement("letter");
     letter.className = "letter";
     letter.innerHTML = wordCont.charAt(i);
     word.appendChild(letter);
+
     letters.push(letter);
   }
 
@@ -24,7 +25,8 @@ textMovedAll[currentLetter].style.opacity = 1;
 for (let i = 0; i < textMovedAll.length; i++) {
   change(textMovedAll[i]);
 }
-// setInterval(change, 2000);
+let test = change(currentLetter);
+setInterval(test, 1000);
 
 //Writing Letters
 
