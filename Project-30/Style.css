@@ -11,3 +11,16 @@
 body {
   min-height: 100vh;
 }
+img {
+  /* Clean then  */
+  width: 100px;
+  height: 100px;
+}
+.container {
+  width: 80%;
+  height: auto;
+  flex-direction: column;
+}
+form {
+  margin-bottom: 30px;
+}
