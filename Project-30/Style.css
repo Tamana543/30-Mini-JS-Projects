@@ -41,6 +41,9 @@ img {
   width: 100%;
   height: 30px;
 }
+#search:focus {
+  outline: 1px solid #000;
+}
 .submit {
   position: absolute;
   right: 0;
@@ -58,6 +61,8 @@ img {
   opacity: 1;
 }
 .display {
+  backdrop-filter: blur(10px);
+
   box-shadow: 1px 1px 20px 9px #0000006b;
   padding: 2% 3%;
   gap: 3%;
@@ -72,10 +77,11 @@ img {
 }
 .display_text-box p {
   margin: 4%;
-  color: #000000b0;
+  /* color: #000000b0; */
+  color: #ffffff79;
 }
 .name {
-  color: #000000f1 !important;
+  color: #ffffffcb !important;
 }
 .date {
   opacity: 0.7;
