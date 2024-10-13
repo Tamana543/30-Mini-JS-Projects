@@ -21,6 +21,8 @@ img {
 }
 .container {
   width: 80%;
+
+  /* width: 100vh; */
   height: auto;
   flex-direction: column;
 }
@@ -77,4 +79,12 @@ img {
 }
 .date {
   opacity: 0.7;
+}
+@media (max-width: 500px) {
+  .display {
+    width: 40vh;
+  }
+  img {
+    height: 80px;
+  }
 }
