@@ -15,7 +15,7 @@ body {
   background-size: cover;
 }
 img {
-  /* Clean then  */
+  border-radius: 20%;
   width: 100px;
   height: 100px;
 }
@@ -24,6 +24,34 @@ img {
   height: auto;
   flex-direction: column;
 }
-form {
+.main_form {
   margin-bottom: 30px;
+  width: 100%;
+}
+.main_form div {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+}
+#search {
+  background-color: #0000006b;
+  border: 0.8px solid #0000006b;
+  width: 100%;
+  height: 30px;
+}
+.submit {
+  position: absolute;
+  right: 0;
+  margin: 2%;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+
+  /* color: #b8a2404b; */
+  cursor: pointer;
+  filter: grayscale(1);
+  opacity: 0.5;
+}
+.submit:hover {
+  opacity: 1;
 }
