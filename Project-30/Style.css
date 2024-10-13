@@ -55,3 +55,26 @@ img {
 .submit:hover {
   opacity: 1;
 }
+.display {
+  box-shadow: 1px 1px 20px 9px #0000006b;
+  padding: 2% 3%;
+  gap: 3%;
+  width: 100vh;
+  justify-content: flex-start;
+}
+.display_text-box {
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+.display_text-box p {
+  margin: 4%;
+  color: #000000b0;
+}
+.name {
+  color: #000000f1 !important;
+}
+.date {
+  opacity: 0.7;
+}
