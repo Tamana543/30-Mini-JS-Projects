@@ -11,8 +11,8 @@ async function UrlGenerator(MainUrl) {
   try {
     const url = await fetch(MainUrl);
     const data = await url.json();
-
-    return data;
+    dataArray = data.results;
+    return dataArray;
   } catch (error) {
     console.error(error);
   }
@@ -25,10 +25,11 @@ function UiGenerator(event) {
   const data = UrlGenerator(
     `https://api.themoviedb.org/3/search/movie?api_key=${APIKey}&language=en-US&page=1&include_adult=false&query=${keyword}`
   );
-  dataArray = data.results;
-  console.log(dataArray);
 
-  //   nameEl.textContent = data.results.original_title;
-  //   descriptionEl.textContent = data.results[0].overview;
+  console.log(data);
+
+  nameEl.textContent = data.original_title;
+  descriptionEl.textContent = data.overview;
+  console.log(data.original_title, data.overview);
 }
 submitBtn.addEventListener("click", UiGenerator);
