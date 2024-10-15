@@ -36,19 +36,22 @@ function UiGenerator(event) {
       div.classList.add("display");
       const img = document.createElement("img");
       img.classList.add("movieImage");
-      img.src = data.backdrop_path;
+      img.src =
+        data.backdrop_path === null
+          ? `Capture 3.PNG`
+          : `https://image.tmdb.org/t/p/w500${data[i].backdrop_path}`;
 
       const div_2 = document.createElement("div");
       div_2.classList.add("display_text-box");
       const name = document.createElement("p");
       name.classList.add("name");
-      name.textContent = data.original_title;
+      name.textContent = data[i].original_title;
       const description = document.createElement("p");
       description.classList.add("description");
-      description.textContent = data.overview;
+      description.textContent = data[i].overview;
       const date = document.createElement("p");
       date.classList.add("date");
-      date.textContent = data.release_date;
+      date.textContent = data[i].release_date;
       boxContainers.appendChild(div);
       div.appendChild(img);
       div.appendChild(div_2);
