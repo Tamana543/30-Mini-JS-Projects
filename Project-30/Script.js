@@ -12,6 +12,7 @@ async function UrlGenerator(MainUrl) {
     const url = await fetch(MainUrl);
     const data = await url.json();
     dataArray = data.results;
+    // console.log(dataArray);
     return dataArray;
   } catch (error) {
     console.error(error);
@@ -25,8 +26,10 @@ function UiGenerator(event) {
 
   if (keyword) {
     const data = UrlGenerator(
-      `https://api.themoviedb.org/3/search/movie?api_key=${APIKey}&language=en-US&page=1&include_adult=false&query=${keyword}`
+      `https://api.themoviedb.org/3/search/movie?api_key=58662704857e9a3d73c2c2c365191b0d&language=en-US&page=1&include_adult=false&query=${keyword}`
     );
+
+    console.log(data);
     for (let i = 0; i > data.length; i++) {
       console.log(data);
       const div = document.createElement("div");
@@ -38,9 +41,9 @@ function UiGenerator(event) {
       const name = document.createElement("p");
       name.classList.add("name");
       const description = document.createElement("p");
-      name.classList.add("description");
+      description.classList.add("description");
       const date = document.createElement("p");
-      name.classList.add("date");
+      date.classList.add("date");
       // nameEl.textContent = data[i].original_title;
       // descriptionEl.textContent = data[i].overview;
       // console.log(data[i].original_title, data[i].overview);
