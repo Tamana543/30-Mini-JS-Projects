@@ -48,6 +48,7 @@ submitBtn.addEventListener("click", (event) => {
 
     DOMTitle.value = "";
     DOMDescription.value = "";
+    headEl.appendChild(ul)
   } else return;
 });
 headEl.forEach((head) => {
