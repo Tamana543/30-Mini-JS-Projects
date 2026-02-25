@@ -5,8 +5,7 @@ const headEl = document.getElementsByTagName("head"),
   submitBtn = document.getElementById("btn"),
   mainEl = document.querySelector(".main"),
   openBtn = document.querySelectorAll(".open");
-// const parent = document.querySelectorAll(".lists");
-const parent = document.querySelector('.main');
+const parent = document.querySelectorAll(".lists");
 
 submitBtn.addEventListener("click", (event) => {
   event.preventDefault();
@@ -49,10 +48,10 @@ submitBtn.addEventListener("click", (event) => {
 
     DOMTitle.value = "";
     DOMDescription.value = "";
-    parent.appendChild(ul)
+    document.querySelector('.main').appendChild(ul)
   } else return;
 });
-Array.from(parent).forEach((head) => {
+parent.forEach((head) => {
   head.addEventListener("click", () => {
     console.log(this);
     const item = head.parentElement;
