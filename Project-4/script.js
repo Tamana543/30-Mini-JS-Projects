@@ -5,12 +5,12 @@ const quoteContainer = document.querySelector(".main_text"),
 
 async function get_quote_of_the_day() {
   const AJAX = await fetch(
-    ` https://programming-quotesapi.vercel.app/api/random`
+    ` https://echoes.soferity.com/api/quotes`
   );
   const data = await AJAX.json();
-  console.log(data);
-  quoteContainer.textContent = data.quote;
-  author.textContent = data.author;
+  console.log(data.data[0].quote);
+  quoteContainer.textContent = data.data[0].quote;
+  author.textContent = data.data[0].author;
 }
 btn.addEventListener("click", get_quote_of_the_day);
 // copy the quote in clipboard
