@@ -1,11 +1,12 @@
-const headEl = document.querySelectorAll(".head"),
+const headEl = document.getElementsByTagName("head"),
   descriptionEl = document.querySelectorAll(".description"),
   DOMTitle = document.getElementById("head"),
   DOMDescription = document.getElementById("description"),
   submitBtn = document.getElementById("btn"),
   mainEl = document.querySelector(".main"),
   openBtn = document.querySelectorAll(".open");
-const parent = document.querySelectorAll(".lists");
+// const parent = document.querySelectorAll(".lists");
+const parent = document.querySelector('.main');
 
 submitBtn.addEventListener("click", (event) => {
   event.preventDefault();
@@ -48,10 +49,10 @@ submitBtn.addEventListener("click", (event) => {
 
     DOMTitle.value = "";
     DOMDescription.value = "";
-    headEl.appendChild(ul)
+    parent.appendChild(ul)
   } else return;
 });
-headEl.forEach((head) => {
+Array.from(parent).forEach((head) => {
   head.addEventListener("click", () => {
     console.log(this);
     const item = head.parentElement;
