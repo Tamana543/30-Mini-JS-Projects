@@ -138,11 +138,13 @@ Below are the live demos for the projects in this repository. Each one is deploy
 
 ---
 
+
 ## Author
 
-**Tamana**  
+**Tamana\<ReginaJS/\>**  
 Front‑End Developer | JavaScript Explorer
 
 ---
+
 
 ⭐ If this repo resonates with you, feel free to star it.
