@@ -43,7 +43,10 @@ function write() {
     newWorld[0].parentElement.style.opacity = 1;
     animateIn(newWorld, i);
   }
-  word = word == text.length - 1 ? 0 : word + 1;
+
+    // word = word == text.length - 1 ? 0 : word + 1;
+    currentLetter = 
+  currentLetter === text.length - 1 ? 0 : currentLetter + 1;
 }
 function animateOut(word, i) {
   setTimeout(() => {
