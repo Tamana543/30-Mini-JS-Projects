@@ -109,7 +109,7 @@ Below are the live demos for the projects in this repository. Each one is deploy
 9. **CSS Changer** – [Live](https://css-changer-tamana.netlify.app/)
 10. **Stopwatch** – [Live](https://stopwatch-tamana.netlify.app/)
 11. **Eye Watching Animation** – [Live](https://tamana543.github.io/Jerry-Minions-/)
-12. **Accordions** – _Live demo coming soon_
+12. **Accordions** – [Live](https://accordiontsreginajs.netlify.app/)
 13. **Password Generator** – [Live](https://password-generator-tamana.netlify.app/)
 14. **Scrollbar Generator** – [Live](https://scroll-bar-tamana.netlify.app/)
 15. **Captcha Generator** – [Live](https://captcha-generator-tamana.netlify.app/)
