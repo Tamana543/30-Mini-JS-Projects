@@ -13,16 +13,18 @@ body {
 .container {
   display: flex;
   flex-direction: column;
+  /* align-items: center; */
   justify-content: space-between;
   gap: 2%;
 
-  height: 30%;
+    height: 35%;
 }
 .box {
   position: relative;
   background-image: url(Earth_svg.jfif);
-  width: 11rem;
-  height: 10rem;
+     width: 14rem;
+    height: 12rem;
+margin: 0 auto;
   background-size: 200%;
   border-radius: 50%;
   transition: transform 100ms linear;
@@ -51,11 +53,12 @@ body {
   font-family: sans-serif;
   text-align: center;
   position: relative;
+      margin-top: 1rem;
 }
 .text_moved {
   position: absolute;
   top: -12%;
-  right: -77%;
+    right: -50%;
 
   width: 10rem;
   font-size: 1.5rem;
