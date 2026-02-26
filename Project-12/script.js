@@ -48,14 +48,18 @@ submitBtn.addEventListener("click", (event) => {
 
     DOMTitle.value = "";
     DOMDescription.value = "";
-    document.querySelector('.main').appendChild(ul)
+    mainEl.appendChild(ul)
   } else return;
 });
 parent.forEach((head) => {
-  head.addEventListener("click", () => {
-    console.log(this);
+  mainEl.addEventListener("click", (event) => {
+    // console.log(this);
+     const head = event.target.closest(".head");
+  if (!head) return;
+
+  const content = head.nextElementSibling;
     const item = head.parentElement;
-    const content = item.querySelector(".description");
+    // const content = item.querySelector(".description");
     descriptionEl.forEach((ele) => {
       if (ele !== content) {
         ele.classList.remove("active");
