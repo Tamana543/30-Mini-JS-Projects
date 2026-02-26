@@ -118,7 +118,7 @@ Below are the live demos for the projects in this repository. Each one is deploy
 18. **Search Bar** – [Live](https://searchbar-tamana.netlify.app/)
 19. **JavaScript Timeline** – [Live](https://timeline-js-tamana.netlify.app/)
 20. **Sorting Tabs** – [Live](https://sortingtabs-tamana.netlify.app/)
-21. **Text Rotation Animation** – _Live demo coming soon_
+21. **Text Rotation Animation** – [live](https://textrotationanimaregenajs.netlify.app/)
 22. **Incrementing Counter** – [Live](https://socia-media-counter-tamana.netlify.app/)
 23. **Random Picker Visualizer** – [Live](https://random-picker-tamana.netlify.app/)
 24. **Social Media Animation** – [Live](https://sociamedia-animation.netlify.app/)
