@@ -80,22 +80,20 @@ function initGame() {
   createCards();
   const card = document.querySelectorAll(".card");
   for (let i = 0; i < card.length; i++) {
-    card[i].addEventListener(
-      "click",
-      function (event) {
-        if (card[i] !== event.target) return;
-        if (event.target.classList.contains("show")) return;
-        if (isFirstClick) {
-          timerID = setInterval(timer, 1000);
+   card[i].addEventListener("click", function () {
+  if (this.classList.contains("show") || this.classList.contains("match")) return;
 
-          isFirstClick = false;
-        }
-        showCard(event.target);
+  if (isFirstClick) {
+    timerID = setInterval(timer, 1000);
+    isFirstClick = false;
+  }
 
-        setTimeout(addCard, 550, shuffleCardEn[i], event.target, cardText, i);
-      },
-      false
-    );
+  showCard(this);
+
+  setTimeout(() => {
+    addCard(shuffleCardEn[i], this, cardText, i);
+  }, 550);
+});
   }
 }
 function addCard(card, cardHTML, testList, pos) {
@@ -136,12 +134,13 @@ function cardsMatch(card1, card2) {
 function cardsDontMatch(card1, card2) {
   card1.classList.add("no-match");
   card2.classList.add("no-match");
+  card1.classList.toggle("no-match");
+  card2.classList.toggle("no-match");
   setTimeout(() => {
-    card1.classList.toggle("no-match");
-    card2.classList.toggle("no-match");
+    
+    card1.classList.toggle("show");
     card2.classList.toggle("show");
-    card2.classList.toggle("show");
-  }, 300);
+  }, 600);
 }
 let min = 0;
 let second = 0;
