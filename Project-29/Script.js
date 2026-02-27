@@ -147,22 +147,15 @@ let min = 0;
 let second = 0;
 function winingEn() {
   clearInterval(timerID);
-  modal.classList.toggle("show_modal");
+  modal.classList.add("show_modal");
   const stats = document.querySelector(".stats");
-  if (second % 60 < 10) {
-    stats.textContent = `You won with ${moveCounter} moves with time:  ${min}:0 ${
-      second % 60
-    }`;
-  } else {
-    stats.textContent = `You won with ${moveCounter} moves with time:  ${min}:0 ${
-      second % 60
-    }`;
-  }
+  const secs = second % 60 < 10 ?  `0${second % 60}` : second % 60;
+
+  stats.textContent = `You won with ${moveCounter} moves in ${min}:${secs}`;
 }
 function updateMoveCounter() {
   moveCounter++;
-  moves.textContent = `${moveCounter};
-  `;
+  moves.textContent = moveCounter;
 }
 function timer() {
   second++;
