@@ -97,9 +97,9 @@ function initGame() {
 
   for (let i = 0; i < card.length; i++) {
    card[i].addEventListener("click", function () {
-    if (lockBoard) {
-  return
-}
+    if (lockBoard) return;
+
+    
   if (this.classList.contains("show") || this.classList.contains("match")) return;
 
   if (isFirstClick) {
@@ -155,13 +155,12 @@ function cardsDontMatch(card1, card2) {
   lockBoard = true
   card1.classList.add("no-match");
   card2.classList.add("no-match");
-  card1.classList.toggle("no-match");
-  card2.classList.toggle("no-match");
   setTimeout(() => {
-    
-    card1.classList.toggle("show");
-    card2.classList.toggle("show");
-  }, 600);
+    card1.classList.remove("show");
+    card2.classList.remove("show");
+
+    lockBoard = false;
+  }, 800);
 }
 let min = 0;
 let second = 0;
