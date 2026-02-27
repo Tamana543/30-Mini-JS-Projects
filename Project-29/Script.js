@@ -60,17 +60,29 @@ function createCards() {
     // <img src="" alt="" >
     const li = document.createElement("li");
     li.classList.toggle("card");
+
+    const inner = document.createElement("div");
+    inner.classList.add("inner");
+
+    const front = document.createElement("div");
+    front.classList.add("front");
+
+    const back = document.createElement("div");
+    back.classList.add("back");
+
+    
     img = document.createElement("img");
+    img.src = card;
 
-    const i = document.createElement("i");
-    i.classList.toggle("fa");
+    // const i = document.createElement("i");
+    // i.classList.toggle("fa");
     // const imgSrc = img.src;
+    front.appendChild(img)
+    inner.appendChild(front)
+    inner.appendChild(back)
 
-    img.src = `${card}`;
-
-    const board = document.querySelector(".board");
-    li.appendChild(img);
-    li.appendChild(i);
+    li.appendChild(inner);
+    // li.appendChild(i);
     board.appendChild(li);
   }
 }
@@ -82,7 +94,7 @@ function initGame() {
   // debugger;
   createCards();
   const card = document.querySelectorAll(".card");
-  
+
   for (let i = 0; i < card.length; i++) {
    card[i].addEventListener("click", function () {
     if (lockBoard) {
