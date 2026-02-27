@@ -30,6 +30,8 @@ let cards = [
   "shuckedFace.jfif",
   "shuckedFace.jfif",
 ];
+let lockBoard = false;
+
 
 closeModalBtn.addEventListener("click", () => {
   modal.classList.toggle("show_modal");
@@ -80,8 +82,12 @@ function initGame() {
   // debugger;
   createCards();
   const card = document.querySelectorAll(".card");
+  
   for (let i = 0; i < card.length; i++) {
    card[i].addEventListener("click", function () {
+    if (lockBoard) {
+  return
+}
   if (this.classList.contains("show") || this.classList.contains("match")) return;
 
   if (isFirstClick) {
@@ -133,6 +139,8 @@ function cardsMatch(card1, card2) {
   }
 }
 function cardsDontMatch(card1, card2) {
+
+  lockBoard = true
   card1.classList.add("no-match");
   card2.classList.add("no-match");
   card1.classList.toggle("no-match");
