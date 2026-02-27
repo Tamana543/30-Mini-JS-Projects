@@ -5,6 +5,7 @@ let moves = document.querySelector(".moves");
 let restart = document.querySelector(".restart");
 let timerEl = document.querySelector(".timer");
 const newGameBtn = document.querySelector(".new_game");
+  let elements = board.getElementsByClassName("card");
 let cardText = [];
 let moveCounter = 0;
 let match = 0;
@@ -179,17 +180,16 @@ function restartGame() {
   moveCounter = 0;
   second = 0;
   min = 0;
+  match = 0;
   isFirstClick = true;
-  isRestart = true;
-  const board = document.querySelector(".board");
-  let elements = board.getElementsByClassName("card");
+  // isRestart = true;
+  cardText.length = 0;
+ 
+board.innerHTML ="";
 
-  while (elements[0]) {
-    elements.removeChild([elements]);
-  }
-  shuffleCardEn = shuffle(cards);
+  // shuffleCardEn = shuffle(cards);
   timerEl.textContent = `0:00`;
-  moves.textContent = `Moves: ${moveCounter}`;
+  moves.textContent = '0';
   initGame();
 }
 
