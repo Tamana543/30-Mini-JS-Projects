@@ -12,12 +12,17 @@ async function UrlGenerator() {
     const keyword = inputEl.value;
     if (keyword) {
       const APIKey = `58662704857e9a3d73c2c2c365191b0d`;
-      const url = await fetch(
+      const response = await fetch(
         `https://api.themoviedb.org/3/search/movie?api_key=${APIKey}&language=en-US&page=1&include_adult=false&query=${keyword}`
       );
-      const data = await url.json();
-      dataArray = data.results;
-      UiGenerator(dataArray);
+      const data = await response.json();
+
+const moviesWithImages = data.results.filter(
+  movie => movie.poster_path !== null
+);
+
+UiGenerator(moviesWithImages);
+      UiGenerator(data.results);
     } else {
       alert("Fill the input ;)");
     }
@@ -35,12 +40,13 @@ function UiGenerator(data) {
     const div = document.createElement("div");
     div.classList.add("display");
 
+    const poster =data[i].poster_path;
     const img = document.createElement("img");
     img.classList.add("movieImage");
     img.src =
       data[i].backdrop_path === null
-        ? `https://image.tmdb.org/t/p/w500${data[i].backdrop_path}`
-        : `Capture 3.PNG`;
+        ? `https://image.tmdb.org/t/p/w500${poster}`
+        : `https://via.placeholder.com/500x750?text=No+Image`;
 
     const div_2 = document.createElement("div");
     div_2.classList.add("display_text-box");
@@ -62,7 +68,7 @@ function UiGenerator(data) {
     div.appendChild(div_2);
     div_2.appendChild(name);
     div_2.appendChild(description);
-    div_2.appendChild(data);
+    // div_2.appendChild(data);
 
     boxContainers.appendChild(div)
     // nameEl.textContent = data[i].original_title;
