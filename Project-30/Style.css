@@ -20,7 +20,7 @@ img {
   height: 100px;
 }
 .container {
-  width: 80%;
+  width: 100%;
 
   /* width: 100vh; */
   height: auto;
@@ -69,9 +69,12 @@ img {
   box-shadow: 1px 1px 20px 9px #0000006b;
   padding: 2% 3%;
   gap: 3%;
-  width: 100vh;
+  width: 100%;
   justify-content: flex-start;
+  
+
 }
+
 .display_text-box {
   flex-direction: column;
   align-items: flex-start;
