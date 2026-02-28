@@ -65,7 +65,7 @@ img {
 }
 .display {
   backdrop-filter: blur(10px);
-
+    flex-direction: column;
   box-shadow: 1px 1px 20px 9px #0000006b;
   padding: 2% 3%;
   gap: 3%;

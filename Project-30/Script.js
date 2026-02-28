@@ -18,11 +18,11 @@ async function UrlGenerator() {
       const data = await response.json();
 
 const moviesWithImages = data.results.filter(
-  movie => movie.poster_path !== null
-);
+movie => movie.poster_path && movie.overview
+).slice(0,6); // to show only 6
 
 UiGenerator(moviesWithImages);
-      UiGenerator(data.results);
+
     } else {
       alert("Fill the input ;)");
     }
@@ -36,18 +36,18 @@ function UiGenerator(data) {
   boxContainers.innerHTML =""
 
   for (let i = 0; i < data.length; i++) {
-    // console.log(data);
+
     const div = document.createElement("div");
     div.classList.add("display");
 
     const poster =data[i].poster_path;
     const img = document.createElement("img");
     img.classList.add("movieImage");
-    img.src =
-      data[i].backdrop_path === null
-        ? `https://image.tmdb.org/t/p/w500${poster}`
-        : `https://via.placeholder.com/500x750?text=No+Image`;
-
+    img.src = `https://image.tmdb.org/t/p/w500${data[i].poster_path}`;
+    // img.src =
+    //   data[i].poster_path === null
+    //     ? `https://image.tmdb.org/t/p/w500${poster}`
+    //     : `https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png`;
     const div_2 = document.createElement("div");
     div_2.classList.add("display_text-box");
 
@@ -63,17 +63,13 @@ function UiGenerator(data) {
     date.classList.add("date");
     date.textContent = data[i].release_date;
 
-    // boxContainers.appendChild(div);
     div.appendChild(img);
     div.appendChild(div_2);
     div_2.appendChild(name);
     div_2.appendChild(description);
-    // div_2.appendChild(data);
 
     boxContainers.appendChild(div)
-    // nameEl.textContent = data[i].original_title;
-    // descriptionEl.textContent = data[i].overview;
-    // console.log(data[i].original_title, data[i].overview);
+
   }
 }
 
