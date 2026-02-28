@@ -9,9 +9,9 @@ const body = document.querySelector("body"),
 
 async function UrlGenerator() {
   try {
+    const keyword = inputEl.value;
     if (keyword) {
       const APIKey = `58662704857e9a3d73c2c2c365191b0d`;
-      const keyword = inputEl.value;
       const url = await fetch(
         `https://api.themoviedb.org/3/search/movie?api_key=${APIKey}&language=en-US&page=1&include_adult=false&query=${keyword}`
       );
@@ -26,6 +26,7 @@ async function UrlGenerator() {
   }
 }
 let dataArray = [];
+
 function UiGenerator(dataEl) {
   const data = dataEl;
   console.log(data);
