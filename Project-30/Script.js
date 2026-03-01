@@ -1,7 +1,7 @@
 const body = document.querySelector("body"),
   inputEl = document.querySelector("#search"),
   submitBtn = document.querySelector(".submit"),
-  boxContainers = document.querySelector(".display"),
+  boxContainers = document.querySelector(".results"),
   movieImg = document.querySelector(".movieImage"),
   nameEl = document.querySelector(".name"),
   descriptionEl = document.querySelector(".description"),
@@ -19,7 +19,7 @@ async function UrlGenerator() {
 
 const moviesWithImages = data.results.filter(
 movie => movie.poster_path && movie.overview
-).slice(0,6); // to show only 6
+); 
 
 UiGenerator(moviesWithImages);
 
@@ -38,9 +38,7 @@ function UiGenerator(data) {
   for (let i = 0; i < data.length; i++) {
 
     const div = document.createElement("div");
-    div.classList.add("display");
-
-    const poster =data[i].poster_path;
+   div.classList.add("movie-card");
     const img = document.createElement("img");
     img.classList.add("movieImage");
     img.src = `https://image.tmdb.org/t/p/w500${data[i].poster_path}`;
