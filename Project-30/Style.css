@@ -10,9 +10,11 @@
 }
 body {
   min-height: 100vh;
-  background-image: url(background_img.webp);
+  /* background-image: url(background_img.webp);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+   /* box-shadow: inset -1px -1px 20px 6px rgba(22, 22, 22, 0.87); */
+   background-color:rgba(22, 22, 22, 0.87) ;
 }
 img {
   border-radius: 20%;
@@ -43,13 +45,15 @@ img {
   color: #fff;
   padding-left: 2%;
   text-transform: capitalize;
+      margin-top: 2%;
 }
 #search:focus {
   outline: 1px solid #000;
 }
 .submit {
   position: absolute;
-  right: 0;
+right: -11px;
+    top: -2px;
   margin: 2%;
   background: none;
   border: none;
@@ -69,7 +73,7 @@ img {
   box-shadow: 1px 1px 20px 9px #0000006b;
   padding: 2% 3%;
   gap: 3%;
-  width: 100%;
+  width: 90%;
   justify-content: flex-start;
   
 
