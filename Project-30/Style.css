@@ -45,7 +45,9 @@ img {
 }
 #search:target,
 #search:focus-within,
-#search:focus {
+#search:focus,
+#search:active,
+#search:focus-visible {
   outline: 1px solid #000;
   background-color: #0000006b !important;
 }
@@ -66,17 +68,7 @@ right: -11px;
 .submit:hover {
   opacity: 1;
 }
-/* .display {
-  backdrop-filter: blur(10px);
-    flex-direction: column;
-  box-shadow: 1px 1px 20px 9px #0000006b;
-  padding: 2% 3%;
-  gap: 3%;
-  width: 90%;
-  justify-content: flex-start;
-  
 
-} */
 .results {
   flex-direction: column;
   gap: 15px;
@@ -84,6 +76,23 @@ right: -11px;
   max-height: 500px;   /* control visible height */
   overflow-y: auto;    /* enables vertical scroll */
   padding: 10px;
+}
+.results::-webkit-scrollbar {
+  width: 10px; /* thickness of the vertical scrollbar */
+}
+
+.results::-webkit-scrollbar-track {
+  background: #0000006b; /* color of the track (background) */
+  border-radius: 30%;
+}
+
+.results::-webkit-scrollbar-thumb {
+  background: #999; /* color of the thumb (draggable handle) */
+  border-radius: 5px; /* rounds the corners of the thumb */
+}
+
+.results::-webkit-scrollbar-thumb:hover {
+  background: #555; /* color when hovering over the thumb */
 }
 .movie-card {
   backdrop-filter: blur(10px);
