@@ -126,8 +126,8 @@ Below are the live demos for the projects in this repository. Each one is deploy
 26. **Theme Toggle** – [Live](https://theme-toggler-tamana.netlify.app/)
 27. **Fluid Image Popup** – [Live](https://fluid-img-pop-up.netlify.app/)
 28. **Dropdown Menu** – [Live](https://dropdown-menu-tamana.netlify.app/)
-29. **Memory Cards Game** [Live](https://memorycardgamereginajs.netlify.app/)
-30. **Live Movie Searching Engine** – _Live demo coming soon_
+29. **Memory Cards Game** - [Live](https://memorycardgamereginajs.netlify.app/)
+30. **Live Movie Searching Engine** - [Live](https://searchmoviesgetdescriptionsregina.netlify.app/)
 
 ---
 
