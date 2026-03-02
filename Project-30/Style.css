@@ -42,15 +42,22 @@ img {
   padding-left: 2%;
   text-transform: capitalize;
       margin-top: 2%;
+        caret-color: #ffffff;     /* blinking cursor */
 }
-#search:target,
-#search:focus-within,
-#search:focus,
-#search:active,
-#search:focus-visible {
-  outline: 1px solid #000;
-  background-color: #0000006b !important;
+#search:focus {
+  outline: none;
+  border: 1px solid #999;
+  box-shadow: 0 0 5px #0000006b;
+  
 }
+#search:-webkit-autofill,
+#search:-webkit-autofill:hover,
+#search:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #0000006b inset;
+ 
+-webkit-text-fill-color: #ffffff;
+}
+
 .submit {
   position: absolute;
 right: -11px;
